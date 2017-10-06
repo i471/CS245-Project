@@ -7,7 +7,10 @@ package cs245.project;
 
 import java.awt.Dimension;
 import java.awt.Graphics;
+import java.awt.Image;
+import java.awt.image.BufferedImage;
 import java.io.File;
+import java.io.IOException;
 import javax.imageio.ImageIO;
 import javax.swing.JToggleButton;
 
@@ -31,8 +34,9 @@ Dimension size = toggle.getPreferredSize();
 public void paintComponent(Graphics g){
  super.paintComponent(g);
  try{
- pic = ImageIO.read(new File("src\\tardis.jpg"));
+     BufferedImage pic = ImageIO.read(new File("src\\background.jpg"));
  }catch(IOException e){}
+     Image pic = null;
 
  g.drawImage(pic,50,50, 100, 100, this);
  }

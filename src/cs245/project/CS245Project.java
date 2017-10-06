@@ -13,6 +13,9 @@
 package cs245.project;
 
 import java.awt.Window;
+import java.io.File;
+import javax.swing.ImageIcon;
+import javax.swing.JLabel;
 
 /**
  *
@@ -24,8 +27,13 @@ public class CS245Project {
     public static void main(String[] args) 
     {
        JFrame obj = new JFrame();
+       obj.setLocationRelativeTo(null); //Centers frame on screen
+       obj.add(new JLabel(new ImageIcon("background.jpeg")));
        obj.setVisible(true);
        
+       
+       File dir1 = new File (".");
+        System.out.println("current directory: " + dir1.getAbsolutePath()); 
        System.out.print("TEST REPO");
     }
 }
