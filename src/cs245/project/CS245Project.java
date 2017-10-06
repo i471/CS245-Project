@@ -26,5 +26,6 @@ public class CS245Project {
        JFrame obj = new JFrame();
        obj.setVisible(true);
        
+       System.out.print("TEST REPO");
     }
 }
