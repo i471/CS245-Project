@@ -15,25 +15,49 @@ import java.util.Locale;
  */
 public class HiyaGUI extends javax.swing.JFrame {
 
+    RandomNameGenerator rng = new RandomNameGenerator();
+    
     int timeLoop = 0;
     public HiyaGUI(){
         
         initComponents();
         showDate();
         showTime();
+        showName();
+        
+        }
+        //Time to make methods
         
         
-    } ///
-    ////
-            public void showDate(){
+        // determines the size of name. We'll use this later for the lines 
+        // under the letters. IDK how to use paint.need to read up. 
+        public void setLines(){
+            setNameSize(); 
+        }
+        // returns the length of the word converts to int.
+        //nameSize.setText changes int to string if we want to show
+        // how many nums there are in the word
+        public double setNameSize(){
+            int length = (rng.getName().length());
+            // this is just to make sure im doing it correctly 
+            nameSize.setText(Integer.toString(length));
+                               //so we can print.
+                                //set Text only prints strings
+            return length;
+        }
+        // gets Random name. although we will change to not display later
+        public void showName(){
+            labelName.setText(rng.getName());
+        }
+        public void showDate(){
           Date d = new Date();
           String txtDate = new SimpleDateFormat("dd/MM/yyyy",Locale.US).format(new Date());
           date.setText("Date: " + txtDate);
         }
-            public void showTime(){
-               new Thread(){
-                public void run(){
-                    while(timeLoop ==0){
+        public void showTime(){
+            new Thread(){
+            public void run(){
+                while(timeLoop ==0){
                        
                 Calendar cal = new GregorianCalendar();
                 int seconds = cal.get(Calendar.SECOND);
@@ -41,7 +65,7 @@ public class HiyaGUI extends javax.swing.JFrame {
                 int hour = cal.get(Calendar.HOUR);
                 time.setText(hour + " : " +minutes+" : "+seconds);
                 
-            }
+                        }
                     }
                 }.start();
             }
@@ -83,6 +107,8 @@ public class HiyaGUI extends javax.swing.JFrame {
         jButtonE = new javax.swing.JButton();
         date = new javax.swing.JLabel();
         time = new javax.swing.JLabel();
+        labelName = new javax.swing.JLabel();
+        nameSize = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -287,6 +313,10 @@ public class HiyaGUI extends javax.swing.JFrame {
 
         time.setText("Time");
 
+        labelName.setText("name");
+
+        nameSize.setText("nameSize");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -339,21 +369,27 @@ public class HiyaGUI extends javax.swing.JFrame {
                 .addGap(27, 27, 27))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jButtonU, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jButtonV)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jButtonW)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jButtonX)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jButtonY)
+                .addGap(18, 18, 18)
+                .addComponent(jButtonZ)
+                .addGap(143, 143, 143))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(45, 45, 45)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jButtonU, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButtonV)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jButtonW)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButtonX)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButtonY)
-                        .addGap(18, 18, 18)
-                        .addComponent(jButtonZ)
-                        .addGap(143, 143, 143))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(nameSize)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(labelName)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(date)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(time)
@@ -365,8 +401,11 @@ public class HiyaGUI extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(date)
-                    .addComponent(time))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 150, Short.MAX_VALUE)
+                    .addComponent(time)
+                    .addComponent(labelName))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(nameSize)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 125, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButtonA)
                     .addComponent(jButtonB)
@@ -587,6 +626,9 @@ public class HiyaGUI extends javax.swing.JFrame {
     private javax.swing.JButton jButtonX;
     private javax.swing.JButton jButtonY;
     private javax.swing.JButton jButtonZ;
+    private javax.swing.JLabel labelName;
+    private javax.swing.JLabel nameSize;
     private javax.swing.JLabel time;
     // End of variables declaration                   
 }
+
