@@ -5,11 +5,17 @@
  */
 package cs245.project;
 
+import java.awt.Dimension;
+import javax.swing.ImageIcon;
+import javax.swing.JLabel;
+
 /**
  *
  * @author RobertDGil
  */
 public class HighscoreFrame extends javax.swing.JFrame {
+    
+    private JFrame mainMenu;
 
     /**
      * Creates new form HighscoreFrame
@@ -69,6 +75,12 @@ public class HighscoreFrame extends javax.swing.JFrame {
 
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
         // TODO add your handling code here:
+       JFrame obj = new JFrame();
+       obj.add(new JLabel(new ImageIcon("background.jpeg")));
+       obj.setMinimumSize(new Dimension(610, 439));
+       obj.setLocationRelativeTo(null); //Centers frame on screen2
+       this.setVisible(false);
+       obj.setVisible(true);
     }//GEN-LAST:event_jButton1MouseClicked
 
     /**

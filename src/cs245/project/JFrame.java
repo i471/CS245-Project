@@ -5,12 +5,18 @@
  */
 package cs245.project;
 
+import java.awt.Dimension;
+import javax.swing.ImageIcon;
+import javax.swing.JLabel;
+
 /**
  *
  * @author RobertDGil
  */
 public class JFrame extends javax.swing.JFrame {
 
+    private HighscoreFrame highScore;
+    private CreditFrame creditFrame;
     /**
      * Creates new form JFrame
      */
@@ -82,10 +88,20 @@ public class JFrame extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
+       HighscoreFrame obj = new HighscoreFrame();
+       obj.setMinimumSize(new Dimension(610, 439));
+       obj.setLocationRelativeTo(null); //Centers frame on screen2
+       this.setVisible(false);
+       obj.setVisible(true);
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
+       CreditFrame obj = new CreditFrame();
+       obj.setMinimumSize(new Dimension(610, 439));
+       obj.setLocationRelativeTo(null); //Centers frame on screen2
+       this.setVisible(false);
+       obj.setVisible(true);
     }//GEN-LAST:event_jButton3ActionPerformed
 
     /**
