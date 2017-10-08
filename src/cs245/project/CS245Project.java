@@ -24,16 +24,19 @@ import javax.swing.JLabel;
 public class CS245Project {
 
 
-    public static void main(String[] args) 
+    public static void main(String[] args) throws InterruptedException 
     {
+       StartupScreen s = new StartupScreen();
+       s.setLocationRelativeTo(null);
+       s.setVisible(true);
+       Thread.sleep(1000);
+       s.setVisible(false); //Close startup screen
+       
        JFrame obj = new JFrame();
        obj.setLocationRelativeTo(null); //Centers frame on screen
        obj.add(new JLabel(new ImageIcon("background.jpeg")));
        obj.setVisible(true);
        
        
-       File dir1 = new File (".");
-        System.out.println("current directory: " + dir1.getAbsolutePath()); 
-       System.out.print("TEST REPO");
     }
 }
