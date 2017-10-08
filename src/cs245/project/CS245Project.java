@@ -33,7 +33,7 @@ public class CS245Project {
        s.setVisible(false); //Close startup screen
        
        JFrame obj = new JFrame();
-       obj.setLocationRelativeTo(null); //Centers frame on screen
+       obj.setLocationRelativeTo(null); //Centers frame on screen2
        obj.add(new JLabel(new ImageIcon("background.jpeg")));
        obj.setVisible(true);
        
