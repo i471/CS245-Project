@@ -12,10 +12,19 @@
 ****************************************************************/
 package cs245.project;
 
+import java.awt.Dimension;
+import java.awt.Graphics;
 import java.awt.Window;
+import java.awt.image.BufferedImage;
 import java.io.File;
+import java.io.IOException;
+import java.net.MalformedURLException;
+import java.net.URL;
+import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
+import javax.swing.JButton;
 import javax.swing.JLabel;
+import javax.swing.JPanel;
 
 /**
  *
@@ -24,7 +33,7 @@ import javax.swing.JLabel;
 public class CS245Project {
 
 
-    public static void main(String[] args) throws InterruptedException 
+    public static void main(String[] args) throws InterruptedException, MalformedURLException, IOException 
     {
        StartupScreen s = new StartupScreen();
        s.setLocationRelativeTo(null);
@@ -33,8 +42,9 @@ public class CS245Project {
        s.setVisible(false); //Close startup screen
        
        JFrame obj = new JFrame();
-       obj.setLocationRelativeTo(null); //Centers frame on screen2
        obj.add(new JLabel(new ImageIcon("background.jpeg")));
+       obj.setMinimumSize(new Dimension(610, 439));
+       obj.setLocationRelativeTo(null); //Centers frame on screen2
        obj.setVisible(true);
        
        
