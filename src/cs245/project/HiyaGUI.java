@@ -16,14 +16,18 @@ import java.util.Locale;
 public class HiyaGUI extends javax.swing.JFrame {
 
     RandomNameGenerator rng = new RandomNameGenerator();
+    private int numberOfGuesses = 0;
+    String answer = null;
+
     
     int timeLoop = 0;    // creates new form of HiyaGUI
     public HiyaGUI() {
-        initComponents();
+       initComponents();
        showName();
        showNameSize();
        showDate();
        showTime();
+       drawUnderscores();
     }
     public void showTime(){
         new Thread(){
@@ -60,12 +64,12 @@ public class HiyaGUI extends javax.swing.JFrame {
     public void drawUnderscores()
     {
         boolean gameWin = false; 
-        
+        String s ="";
         for(int i = 0; i < rng.getLength(); i++)
         {
-            
+            s += " _ ";
         }
-
+        answerHidden.setText(s);
     }
 
     /**
@@ -107,6 +111,7 @@ public class HiyaGUI extends javax.swing.JFrame {
         time = new javax.swing.JLabel();
         name = new javax.swing.JLabel();
         nameSize = new javax.swing.JLabel();
+        answerHidden = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(620, 415));
@@ -305,7 +310,7 @@ public class HiyaGUI extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
@@ -380,6 +385,10 @@ public class HiyaGUI extends javax.swing.JFrame {
                         .addComponent(time, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(22, 22, 22)))
                 .addGap(23, 23, 23))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(answerHidden)
+                .addGap(120, 120, 120))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -391,7 +400,9 @@ public class HiyaGUI extends javax.swing.JFrame {
                     .addComponent(name))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(nameSize)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 131, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 100, Short.MAX_VALUE)
+                .addComponent(answerHidden)
+                .addGap(31, 31, 31)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButtonA)
                     .addComponent(jButtonB)
@@ -569,6 +580,7 @@ public class HiyaGUI extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel answerHidden;
     private javax.swing.JLabel date;
     private javax.swing.JButton jButtonA;
     private javax.swing.JButton jButtonB;

@@ -88,16 +88,10 @@ public class JFrame extends javax.swing.JFrame {
         h.setMinimumSize(new Dimension(610, 439));
         h.setLocationRelativeTo(null); //Centers frame on screen2
         this.setVisible(false);
-        h.setVisible(true);
-        
-        RandomNameGenerator rng = new RandomNameGenerator();
-        System.out.println(rng.getName());
-        System.out.println(rng.getLength());
+        h.setVisible(true); 
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
-
        HighscoreFrame obj = new HighscoreFrame();
        obj.setMinimumSize(new Dimension(610, 439));
        obj.setLocationRelativeTo(null); //Centers frame on screen2
@@ -114,9 +108,6 @@ public class JFrame extends javax.swing.JFrame {
        obj.setVisible(true);
     }//GEN-LAST:event_jButton3ActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
