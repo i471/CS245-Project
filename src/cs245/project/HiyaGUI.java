@@ -3,14 +3,15 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package hello.swing;
+package cs245.project;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
 import java.util.Locale;
 /**
- *ABC
+/**
+ *
  * @author User
  */
 public class HiyaGUI extends javax.swing.JFrame {
@@ -631,4 +632,3 @@ public class HiyaGUI extends javax.swing.JFrame {
     private javax.swing.JLabel time;
     // End of variables declaration                   
 }
-
