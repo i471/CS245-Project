@@ -16,10 +16,22 @@ public class RandomNameGenerator {
     String names[] = {"abstract", "cemetery",
     "nurse", "pharmacy", "climbing"};
     
+    String answer;
+    
+    public RandomNameGenerator()
+    {
+        this.setRandomName();
+    }
     
     public String getName(){
-        return names[random.nextInt(names.length)];
-        
+        return answer;
     }
   
+    public int getLength(){
+        return answer.length();
+    }
+
+    private void setRandomName() {
+        answer = names[random.nextInt(names.length)];
+    }
 }

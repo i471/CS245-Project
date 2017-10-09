@@ -41,7 +41,7 @@ public class HiyaGUI extends javax.swing.JFrame {
                 }.start();
     }
     public void showDate(){
-        String txtDate = new SimpleDateFormat("dd/MM/yyyy",Locale.US).format(new Date());
+        String txtDate = new SimpleDateFormat("MM/dd/yyyy",Locale.US).format(new Date());
         date.setText("Date: " + txtDate);
         
     }
@@ -50,19 +50,24 @@ public class HiyaGUI extends javax.swing.JFrame {
         int length = rng.getName().length();
         // makes length printable setText only prints String
         nameSize.setText(Integer.toString(length));
-        
         return length;
-        
     }
     
     public void showName(){
         name.setText(rng.getName());
     }
     
-    
-    
-    
-    
+    public void drawUnderscores()
+    {
+        boolean gameWin = false; 
+        
+        for(int i = 0; i < rng.getLength(); i++)
+        {
+            
+        }
+
+    }
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
