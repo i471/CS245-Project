@@ -3,8 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
-package hello.swing;
+package cs245.project;
 import java.util.Random;
 /**
  *
@@ -24,4 +23,3 @@ public class RandomNameGenerator {
     }
   
 }
-
