@@ -83,11 +83,17 @@ public class JFrame extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
+                System.out.println("WTF");
+        HiyaGUI h = new HiyaGUI();
+        h.setMinimumSize(new Dimension(610, 439));
+        h.setLocationRelativeTo(null); //Centers frame on screen2
+        this.setVisible(false);
+        h.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
+
        HighscoreFrame obj = new HighscoreFrame();
        obj.setMinimumSize(new Dimension(610, 439));
        obj.setLocationRelativeTo(null); //Centers frame on screen2

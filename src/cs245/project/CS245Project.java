@@ -38,7 +38,7 @@ public class CS245Project {
        StartupScreen s = new StartupScreen();
        s.setLocationRelativeTo(null);
        s.setVisible(true);
-       Thread.sleep(1000);
+       Thread.sleep(000);
        s.setVisible(false); //Close startup screen
        
        JFrame obj = new JFrame();
