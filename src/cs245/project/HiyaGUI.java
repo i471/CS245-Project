@@ -110,21 +110,22 @@ public class HiyaGUI extends javax.swing.JFrame {
 //        g.drawLine(250,200,250,75); //Base Vertical
 //        g.drawLine(250,75,400,75);  //Base ARM
 //        g.drawLine(400,75,400,100); //Base Rope 
+    
     private void drawHangman(Graphics g, int score)
     {
          switch(score)
          {
-             case(90):g.drawOval(250, 100, 100, 50); // head
+             case(90): g.drawOval(385,80,30,30); // head
              break;
-             case (80): g.drawLine(400 , 100, 400, 200); // body
+             case (80): g.drawLine(400,175,400,75); // body
              break;
-             case(70): g.drawLine(200, 200, 250, 250); //  right leg
+             case(70): g.drawLine(400, 175, 375, 200); //  right leg
              break;
-             case (60):g.drawLine(200, 200, 150, 250); // left leg
+             case (60):g.drawLine(400,175,425,200); // left leg
              break;
-             case (50): g.drawLine(150, 150, 200, 175); //left arm
+             case (50): g.drawLine(400,115,380,150); //left arm
              break;
-             case (40): g.drawLine(250, 150, 200, 175); // right arm
+             case (40): g.drawLine(400,115,420,150); // right arm
              break;
          }
     }
@@ -801,14 +802,24 @@ public class HiyaGUI extends javax.swing.JFrame {
     private void wrongGuess()
     {
         Graphics g = this.getGraphics();
-        if(score != 0)
+        if(score >= 60)
         {
             score -= 10;
             drawHangman(g, score);
             System.out.print("Score: " + score);
         }
-        else{
-            System.out.print("You Lose!");
+        else if(score == 50){
+            score -= 10;
+        System.out.print("Score: " + score+ " You Lose!");
+        drawHangman(g,score);
+        
+    }
+        else if (score > 40){
+            
+            score -= 10; 
+            drawHangman(g,score);
+            System.out.print("Score: " + score+ " You Lose!");
+            
         }
     }
     /**
