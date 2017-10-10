@@ -5,6 +5,7 @@
  */
 package cs245.project;
 import java.awt.Color;
+import java.awt.Component;
 import java.awt.Graphics;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -21,6 +22,11 @@ public class HiyaGUI extends javax.swing.JFrame {
     private int numberOfGuesses = 0;
     private int score = 100;
     String answer = null;
+
+    @Override
+    public Component add(Component comp) {
+        return super.add(comp); //To change body of generated methods, choose Tools | Templates.
+    }
 
     
     int timeLoop = 0;    // creates new form of HiyaGUI
@@ -97,6 +103,30 @@ public class HiyaGUI extends javax.swing.JFrame {
             s += " _ ";
         }
         answerHidden.setText(s);
+    }
+//g.drawLine(200,200,300,200);//Base Hori
+//        g.drawLine(200,200,200,215);//Base Left
+//        g.drawLine(300,200,300,215);//Base Right
+//        g.drawLine(250,200,250,75); //Base Vertical
+//        g.drawLine(250,75,400,75);  //Base ARM
+//        g.drawLine(400,75,400,100); //Base Rope 
+    private void drawHangman(Graphics g, int score)
+    {
+         switch(score)
+         {
+             case(90):g.drawOval(250, 100, 100, 50); // head
+             break;
+             case (80): g.drawLine(400 , 100, 400, 200); // body
+             break;
+             case(70): g.drawLine(200, 200, 250, 250); //  right leg
+             break;
+             case (60):g.drawLine(200, 200, 150, 250); // left leg
+             break;
+             case (50): g.drawLine(150, 150, 200, 175); //left arm
+             break;
+             case (40): g.drawLine(250, 150, 200, 175); // right arm
+             break;
+         }
     }
 
     /**
@@ -780,19 +810,16 @@ public class HiyaGUI extends javax.swing.JFrame {
     
     private void wrongGuess()
     {
+        Graphics g = this.getGraphics();
         if(score != 0)
         {
             score -= 10;
+            drawHangman(g, score);
             System.out.print("Score: " + score);
         }
         else{
             System.out.print("You Lose!");
         }
-    }
-    
-    private void drawAnswer()
-    {
-        
     }
     /**
      * @param args the command line arguments
