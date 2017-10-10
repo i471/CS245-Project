@@ -85,15 +85,12 @@ public class JFrame extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
                 System.out.println("WTF");
         HiyaGUI h = new HiyaGUI();
-        h.setMinimumSize(new Dimension(610, 439));
-        h.setLocationRelativeTo(null); //Centers frame on screen2
-        this.setVisible(false);
-        h.setVisible(true); 
+      
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
        HighscoreFrame obj = new HighscoreFrame();
-       obj.setMinimumSize(new Dimension(610, 439));
+       obj.setMinimumSize(new Dimension(600, 400));
        obj.setLocationRelativeTo(null); //Centers frame on screen2
        this.setVisible(false);
        obj.setVisible(true);
@@ -102,7 +99,7 @@ public class JFrame extends javax.swing.JFrame {
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
        CreditFrame obj = new CreditFrame();
-       obj.setMinimumSize(new Dimension(610, 439));
+       obj.setMinimumSize(new Dimension(600, 400));
        obj.setLocationRelativeTo(null); //Centers frame on screen2
        this.setVisible(false);
        obj.setVisible(true);
