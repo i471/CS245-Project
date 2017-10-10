@@ -81,6 +81,7 @@ public class HiyaGUI extends javax.swing.JFrame {
         date.setText("Date: " + txtDate);
         
     }
+    // just to test 
     public int showNameSize(){
         // gets length 
         int length = rng.getName().length();
@@ -88,7 +89,7 @@ public class HiyaGUI extends javax.swing.JFrame {
         nameSize.setText(Integer.toString(length));
         return length;
     }
-    
+    // just to test 
     public void showName(){
         name.setText(rng.getName());
     }
@@ -104,12 +105,6 @@ public class HiyaGUI extends javax.swing.JFrame {
         }
         answerHidden.setText(s);
     }
-//g.drawLine(200,200,300,200);//Base Hori
-//        g.drawLine(200,200,200,215);//Base Left
-//        g.drawLine(300,200,300,215);//Base Right
-//        g.drawLine(250,200,250,75); //Base Vertical
-//        g.drawLine(250,75,400,75);  //Base ARM
-//        g.drawLine(400,75,400,100); //Base Rope 
     
     private void drawHangman(Graphics g, int score)
     {
@@ -478,18 +473,17 @@ public class HiyaGUI extends javax.swing.JFrame {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanelHang, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(1, 1, 1)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jPanelHang, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 84, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(time)
                             .addComponent(date))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 206, Short.MAX_VALUE)
                         .addComponent(answerHidden)
                         .addGap(31, 31, 31)))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
