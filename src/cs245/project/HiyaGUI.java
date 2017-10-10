@@ -32,8 +32,7 @@ public class HiyaGUI extends javax.swing.JFrame {
     int timeLoop = 0;    // creates new form of HiyaGUI
     public HiyaGUI() {
        initComponents();
-       showName();
-       showNameSize();
+      
        showDate();
        showTime();
        drawUnderscores();
