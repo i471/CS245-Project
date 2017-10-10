@@ -85,6 +85,10 @@ public class JFrame extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
                 System.out.println("WTF");
         HiyaGUI h = new HiyaGUI();
+        h.setMinimumSize(new Dimension(600, 400));
+        h.setLocationRelativeTo(null); //Centers frame on screen2
+        this.setVisible(false);
+        h.setVisible(true);
       
     }//GEN-LAST:event_jButton1ActionPerformed
 
