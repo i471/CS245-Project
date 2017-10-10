@@ -39,40 +39,40 @@ public class JFrame extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
+        jButtonPlay = new javax.swing.JButton();
+        jButtonHighscores = new javax.swing.JButton();
+        jButtonCredits = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
 
-        jButton1.setText("PLAY");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        jButtonPlay.setText("PLAY");
+        jButtonPlay.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                jButtonPlayActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1);
-        jButton1.setBounds(460, 280, 110, 28);
+        getContentPane().add(jButtonPlay);
+        jButtonPlay.setBounds(460, 280, 110, 23);
 
-        jButton2.setText("HIGHSCORES");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        jButtonHighscores.setText("HIGHSCORES");
+        jButtonHighscores.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                jButtonHighscoresActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton2);
-        jButton2.setBounds(460, 310, 109, 28);
+        getContentPane().add(jButtonHighscores);
+        jButtonHighscores.setBounds(460, 310, 110, 23);
 
-        jButton3.setText("CREDITS");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        jButtonCredits.setText("CREDITS");
+        jButtonCredits.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                jButtonCreditsActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton3);
-        jButton3.setBounds(460, 340, 110, 28);
+        getContentPane().add(jButtonCredits);
+        jButtonCredits.setBounds(460, 340, 110, 23);
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/cs245/project/background.jpg"))); // NOI18N
         jLabel2.setToolTipText("");
@@ -82,32 +82,32 @@ public class JFrame extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-                System.out.println("WTF");
+    private void jButtonPlayActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonPlayActionPerformed
+
         HiyaGUI h = new HiyaGUI();
         h.setMinimumSize(new Dimension(600, 400));
         h.setLocationRelativeTo(null); //Centers frame on screen2
         this.setVisible(false);
         h.setVisible(true);
       
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_jButtonPlayActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void jButtonHighscoresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonHighscoresActionPerformed
        HighscoreFrame obj = new HighscoreFrame();
        obj.setMinimumSize(new Dimension(600, 400));
        obj.setLocationRelativeTo(null); //Centers frame on screen2
        this.setVisible(false);
        obj.setVisible(true);
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_jButtonHighscoresActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void jButtonCreditsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCreditsActionPerformed
         // TODO add your handling code here:
        CreditFrame obj = new CreditFrame();
        obj.setMinimumSize(new Dimension(600, 400));
        obj.setLocationRelativeTo(null); //Centers frame on screen2
        this.setVisible(false);
        obj.setVisible(true);
-    }//GEN-LAST:event_jButton3ActionPerformed
+    }//GEN-LAST:event_jButtonCreditsActionPerformed
 
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
@@ -142,9 +142,9 @@ public class JFrame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButtonCredits;
+    private javax.swing.JButton jButtonHighscores;
+    private javax.swing.JButton jButtonPlay;
     private javax.swing.JLabel jLabel2;
     // End of variables declaration//GEN-END:variables
 }

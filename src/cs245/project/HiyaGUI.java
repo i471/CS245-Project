@@ -81,6 +81,7 @@ public class HiyaGUI extends javax.swing.JFrame {
         date.setText("Date: " + txtDate);
         
     }
+    // just to test 
     public int showNameSize(){
         // gets length 
         int length = rng.getName().length();
@@ -88,7 +89,7 @@ public class HiyaGUI extends javax.swing.JFrame {
         nameSize.setText(Integer.toString(length));
         return length;
     }
-    
+    // just to test 
     public void showName(){
         name.setText(rng.getName());
     }
@@ -104,11 +105,16 @@ public class HiyaGUI extends javax.swing.JFrame {
         }
         answerHidden.setText(s);
     }
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> 8ead887f6db4867cce721a9c81b40fe430d0b022
     private void drawHangman(Graphics g, int score)
     {
          switch(score)
          {
+<<<<<<< HEAD
              case(90):  g.drawOval(350, 100, 100, 50); // head
              break;
              case (80): g.drawLine(400 , 150, 400, 200); // body
@@ -120,6 +126,19 @@ public class HiyaGUI extends javax.swing.JFrame {
              case (50): g.drawLine(400, 175, 425, 150); //right arm
              break;
              case (40): g.drawLine(400, 175, 375, 150); // left arm
+=======
+             case(90): g.drawOval(385,80,30,30); // head
+             break;
+             case (80): g.drawLine(400,175,400,75); // body
+             break;
+             case(70): g.drawLine(400, 175, 375, 200); //  right leg
+             break;
+             case (60):g.drawLine(400,175,425,200); // left leg
+             break;
+             case (50): g.drawLine(400,115,380,150); //left arm
+             break;
+             case (40): g.drawLine(400,115,420,150); // right arm
+>>>>>>> 8ead887f6db4867cce721a9c81b40fe430d0b022
              break;
          }
     }
@@ -168,6 +187,7 @@ public class HiyaGUI extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         nameSize = new javax.swing.JLabel();
         name = new javax.swing.JLabel();
+        jButtonSkip = new javax.swing.JButton();
 
         jList1.setModel(new javax.swing.AbstractListModel<String>() {
             String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
@@ -390,46 +410,54 @@ public class HiyaGUI extends javax.swing.JFrame {
                 .addContainerGap(43, Short.MAX_VALUE))
         );
 
+        jButtonSkip.setText("Skip");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jButtonA)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButtonB, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButtonC)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButtonD)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jButtonE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jButtonK)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButtonL, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addContainerGap()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(jButtonU)
+                                .addComponent(jButtonA)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jButtonV)
+                                .addComponent(jButtonB, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jButtonW))
+                                .addComponent(jButtonC)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jButtonD)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jButtonE))
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(jButtonM)
+                                .addComponent(jButtonK)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jButtonN)
+                                .addComponent(jButtonL, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jButtonO))))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(185, 185, 185)
-                        .addComponent(jPanelHang, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 121, Short.MAX_VALUE)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(jButtonU)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jButtonV)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jButtonW))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(jButtonM)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jButtonN)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jButtonO))))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(185, 185, 185)
+                                .addComponent(jPanelHang, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 121, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jButtonSkip)
+                        .addGap(40, 40, 40)))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jButtonX)
@@ -472,14 +500,15 @@ public class HiyaGUI extends javax.swing.JFrame {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanelHang, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(1, 1, 1)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jPanelHang, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 84, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 48, Short.MAX_VALUE)
+                        .addComponent(jButtonSkip)
+                        .addGap(18, 18, 18))
                     .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(time)
                             .addComponent(date))
@@ -795,14 +824,28 @@ public class HiyaGUI extends javax.swing.JFrame {
     private void wrongGuess()
     {
         Graphics g = this.getGraphics();
+<<<<<<< HEAD
         if(score != 40)
+=======
+        if(score >= 60)
+>>>>>>> 8ead887f6db4867cce721a9c81b40fe430d0b022
         {
             score -= 10;
             drawHangman(g, score);
             System.out.print("Score: " + score);
         }
-        else{
-            System.out.print("You Lose!");
+        else if(score == 50){
+            score -= 10;
+        System.out.print("Score: " + score+ " You Lose!");
+        drawHangman(g,score);
+        
+    }
+        else if (score > 40){
+            
+            score -= 10; 
+            drawHangman(g,score);
+            System.out.print("Score: " + score+ " You Lose!");
+            
         }
     }
     
@@ -865,6 +908,7 @@ public class HiyaGUI extends javax.swing.JFrame {
     private javax.swing.JButton jButtonQ;
     private javax.swing.JButton jButtonR;
     private javax.swing.JButton jButtonS;
+    private javax.swing.JButton jButtonSkip;
     private javax.swing.JButton jButtonT;
     private javax.swing.JButton jButtonU;
     private javax.swing.JButton jButtonV;
