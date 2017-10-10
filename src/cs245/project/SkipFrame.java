@@ -5,6 +5,10 @@
  */
 package cs245.project;
 
+import java.awt.Dimension;
+import javax.swing.ImageIcon;
+import javax.swing.JLabel;
+
 /**
  *
  * @author User
@@ -80,7 +84,11 @@ public class SkipFrame extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
+        JFrame obj = new JFrame();
+       obj.add(new JLabel(new ImageIcon("background.jpeg")));
+       obj.setMinimumSize(new Dimension(610, 439));
+       obj.setLocationRelativeTo(null); //Centers frame on screen2
+       obj.setVisible(true);// TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
