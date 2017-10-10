@@ -105,16 +105,16 @@ public class HiyaGUI extends javax.swing.JFrame {
         }
         answerHidden.setText(s);
     }
-<<<<<<< HEAD
 
-=======
+
+
     
->>>>>>> 8ead887f6db4867cce721a9c81b40fe430d0b022
+
     private void drawHangman(Graphics g, int score)
     {
          switch(score)
          {
-<<<<<<< HEAD
+
              case(90):  g.drawOval(350, 100, 100, 50); // head
              break;
              case (80): g.drawLine(400 , 150, 400, 200); // body
@@ -126,19 +126,7 @@ public class HiyaGUI extends javax.swing.JFrame {
              case (50): g.drawLine(400, 175, 425, 150); //right arm
              break;
              case (40): g.drawLine(400, 175, 375, 150); // left arm
-=======
-             case(90): g.drawOval(385,80,30,30); // head
-             break;
-             case (80): g.drawLine(400,175,400,75); // body
-             break;
-             case(70): g.drawLine(400, 175, 375, 200); //  right leg
-             break;
-             case (60):g.drawLine(400,175,425,200); // left leg
-             break;
-             case (50): g.drawLine(400,115,380,150); //left arm
-             break;
-             case (40): g.drawLine(400,115,420,150); // right arm
->>>>>>> 8ead887f6db4867cce721a9c81b40fe430d0b022
+
              break;
          }
     }
@@ -824,11 +812,10 @@ public class HiyaGUI extends javax.swing.JFrame {
     private void wrongGuess()
     {
         Graphics g = this.getGraphics();
-<<<<<<< HEAD
-        if(score != 40)
-=======
+
+
         if(score >= 60)
->>>>>>> 8ead887f6db4867cce721a9c81b40fe430d0b022
+
         {
             score -= 10;
             drawHangman(g, score);
