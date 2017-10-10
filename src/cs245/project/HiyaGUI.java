@@ -50,12 +50,12 @@ public class HiyaGUI extends javax.swing.JFrame {
     
     private void drawHangManbase(Graphics g){
         g.setColor(Color.BLACK);
-        g.drawLine(200,200,300,200);//Base Hori
-        g.drawLine(200,200,200,215);//Base Left
-        g.drawLine(300,200,300,215);//Base Right
-        g.drawLine(250,200,250,75); //Base Vertical
-        g.drawLine(250,75,400,75);  //Base ARM
-        g.drawLine(400,75,400,100); //Base Rope 
+        g.drawLine(200,200,300,200);//Hori
+        g.drawLine(200,200,200,215);//Left
+        g.drawLine(300,200,300,215);//Right
+        g.drawLine(250,200,250,75); //Vertical
+        g.drawLine(250,75,400,75);  //arm
+        g.drawLine(400,75,400,100); //rope
     }
     
     
@@ -446,7 +446,7 @@ public class HiyaGUI extends javax.swing.JFrame {
                                 .addGap(185, 185, 185)
                                 .addComponent(jPanelHang, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 121, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 98, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jButtonSkip)
@@ -468,9 +468,6 @@ public class HiyaGUI extends javax.swing.JFrame {
                         .addComponent(jButtonS)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jButtonT))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(answerHidden)
-                        .addGap(97, 97, 97))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jButtonF)
                         .addGap(14, 14, 14)
@@ -488,7 +485,10 @@ public class HiyaGUI extends javax.swing.JFrame {
                                 .addComponent(jButtonI)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(jButtonJ)))))
-                .addContainerGap())
+                .addGap(33, 33, 33))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(answerHidden, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -498,16 +498,16 @@ public class HiyaGUI extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 48, Short.MAX_VALUE)
-                        .addComponent(jButtonSkip)
-                        .addGap(18, 18, 18))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 29, Short.MAX_VALUE)
+                        .addComponent(jButtonSkip))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(time)
                             .addComponent(date))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(answerHidden)
-                        .addGap(31, 31, 31)))
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(answerHidden, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButtonA)
                     .addComponent(jButtonB)
