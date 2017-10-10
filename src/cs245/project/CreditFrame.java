@@ -43,13 +43,13 @@ public class CreditFrame extends javax.swing.JFrame {
         jLabel1.setText("Credits");
 
         jLabel2.setFont(new java.awt.Font("Adobe Hebrew", 1, 18)); // NOI18N
-        jLabel2.setText("Edgar Pineda");
+        jLabel2.setText("Edgar Pineda              010397504");
 
         jLabel3.setFont(new java.awt.Font("Adobe Hebrew", 1, 18)); // NOI18N
-        jLabel3.setText("Josh Montgomery");
+        jLabel3.setText("Josh Montgomery      011750412");
 
         jLabel4.setFont(new java.awt.Font("Adobe Hebrew", 1, 18)); // NOI18N
-        jLabel4.setText("Robert Gil");
+        jLabel4.setText(" Robert Gil                    013502216");
 
         jButton1.setText("Back");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -70,13 +70,13 @@ public class CreditFrame extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(222, 222, 222)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel3)
-                            .addComponent(jLabel2)
-                            .addComponent(jLabel4)))
+                            .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 316, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 357, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 296, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(18, 18, 18)
                         .addComponent(jButton1)))
-                .addContainerGap(220, Short.MAX_VALUE))
+                .addContainerGap(21, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

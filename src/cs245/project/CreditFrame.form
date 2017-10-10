@@ -32,9 +32,9 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="222" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabel4" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabel3" alignment="0" min="-2" pref="316" max="-2" attributes="0"/>
+                          <Component id="jLabel2" alignment="0" min="-2" pref="357" max="-2" attributes="0"/>
+                          <Component id="jLabel4" alignment="0" min="-2" pref="296" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
@@ -42,7 +42,7 @@
                       <Component id="jButton1" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
-              <EmptySpace pref="220" max="32767" attributes="0"/>
+              <EmptySpace pref="21" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -78,7 +78,7 @@
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Adobe Hebrew" size="18" style="1"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Edgar Pineda"/>
+        <Property name="text" type="java.lang.String" value="Edgar Pineda              010397504"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel3">
@@ -86,7 +86,7 @@
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Adobe Hebrew" size="18" style="1"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Josh Montgomery"/>
+        <Property name="text" type="java.lang.String" value="Josh Montgomery      011750412"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel4">
@@ -94,7 +94,7 @@
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Adobe Hebrew" size="18" style="1"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Robert Gil"/>
+        <Property name="text" type="java.lang.String" value=" Robert Gil                    013502216"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JButton" name="jButton1">
