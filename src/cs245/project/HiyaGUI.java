@@ -105,22 +105,28 @@ public class HiyaGUI extends javax.swing.JFrame {
         }
         answerHidden.setText(s);
     }
+
+
+
     
+
     private void drawHangman(Graphics g, int score)
     {
          switch(score)
          {
-             case(90): g.drawOval(385,80,30,30); // head
+
+             case(90):  g.drawOval(350, 100, 100, 50); // head
              break;
-             case (80): g.drawLine(400,175,400,75); // body
+             case (80): g.drawLine(400 , 150, 400, 200); // body
              break;
-             case(70): g.drawLine(400, 175, 375, 200); //  right leg
+             case(70):  g.drawLine(400, 200, 375, 250); // left leg
              break;
-             case (60):g.drawLine(400,175,425,200); // left leg
+             case (60): g.drawLine(400, 200, 425, 250); //  right leg
              break;
-             case (50): g.drawLine(400,115,380,150); //left arm
+             case (50): g.drawLine(400, 175, 425, 150); //right arm
              break;
-             case (40): g.drawLine(400,115,420,150); // right arm
+             case (40): g.drawLine(400, 175, 375, 150); // left arm
+
              break;
          }
     }
@@ -542,7 +548,6 @@ public class HiyaGUI extends javax.swing.JFrame {
     private void jButtonAMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonAMouseClicked
         jButtonA.setEnabled(false);        // TODO add your handling code here:
         if(isInWord("a")){
-            
         }  
         else{
             wrongGuess();
@@ -820,7 +825,10 @@ public class HiyaGUI extends javax.swing.JFrame {
     private void wrongGuess()
     {
         Graphics g = this.getGraphics();
+
+
         if(score >= 60)
+
         {
             score -= 10;
             drawHangman(g, score);
@@ -840,6 +848,8 @@ public class HiyaGUI extends javax.swing.JFrame {
             
         }
     }
+    
+    
     /**
      * @param args the command line arguments
      */
