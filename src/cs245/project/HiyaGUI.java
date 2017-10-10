@@ -393,6 +393,11 @@ public class HiyaGUI extends javax.swing.JFrame {
         );
 
         jButtonSkip.setText("Skip");
+        jButtonSkip.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonSkipActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -439,7 +444,7 @@ public class HiyaGUI extends javax.swing.JFrame {
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jButtonSkip)
-                        .addGap(40, 40, 40)))
+                        .addGap(43, 43, 43)))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jButtonX)
@@ -793,6 +798,14 @@ public class HiyaGUI extends javax.swing.JFrame {
             wrongGuess();
         }
     }//GEN-LAST:event_jButtonZMouseClicked
+
+    private void jButtonSkipActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSkipActionPerformed
+        SkipFrame skip = new SkipFrame();
+        this.setVisible(false);
+        skip.setVisible(true);   
+        skip.setLocationRelativeTo(null);
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonSkipActionPerformed
 
   
     
