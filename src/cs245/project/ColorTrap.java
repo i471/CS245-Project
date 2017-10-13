@@ -32,29 +32,30 @@ public class ColorTrap extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        colorName = new javax.swing.JLabel();
+        colorLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        colorName.setBackground(new java.awt.Color(255, 255, 255));
-        colorName.setForeground(new java.awt.Color(255, 102, 102));
-        colorName.setText("pp");
+        colorLabel.setBackground(new java.awt.Color(255, 255, 255));
+        colorLabel.setFont(new java.awt.Font("Comic Sans MS", 1, 36)); // NOI18N
+        colorLabel.setForeground(new java.awt.Color(255, 102, 102));
+        colorLabel.setText("colorLabel");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(252, 252, 252)
-                .addComponent(colorName)
-                .addContainerGap(322, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(208, Short.MAX_VALUE)
+                .addComponent(colorLabel)
+                .addGap(205, 205, 205))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(173, 173, 173)
-                .addComponent(colorName)
-                .addContainerGap(199, Short.MAX_VALUE))
+                .addContainerGap()
+                .addComponent(colorLabel)
+                .addContainerGap(331, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -118,20 +119,21 @@ public class ColorTrap extends javax.swing.JFrame {
     public void paint(Graphics g)
     {
         super.paint(g);
-        drawCircle(g);
+       // drawCircle(g);
+        setLabelName();
+        setLabelColor();
     }
     
-    public void drawCircle(Graphics g)
+//    public void drawCircle(Graphics g)
+//    {
+//        nextColor(g);
+//        g.fillOval(50, 50, 50, 50);
+//        colorName.setForeground(Color.blue);
+//    }
+
+    public void nextCircleColor(Graphics g)
     {
-        nextColor(g);
-        g.fillOval(50, 50, 50, 50);
-        //colorName.setForeground(Color.red);
-        
-    }
-    public void nextColor(Graphics g)
-    {
-       
-        int r = random.nextInt(3);
+        int r = random.nextInt(5);
         switch(r){
             case 0:
              g.setColor(Color.red);
@@ -149,10 +151,51 @@ public class ColorTrap extends javax.swing.JFrame {
              g.setColor(Color.magenta);  
              break;      
         }
-     
+    }
+    public void setLabelName()
+    {
+        int r = random.nextInt(5);
+        switch(r){
+            case 0:
+             colorLabel.setText("RED");
+             break;
+            case 1:
+             colorLabel.setText("YELLOW");
+             break;
+            case 2:
+             colorLabel.setText("GREEN"); 
+             break;
+            case 3:
+             colorLabel.setText("BLUE"); 
+             break;
+            case 4:
+             colorLabel.setText("MAGENTA"); 
+             break;  
+        }
+    }
+       public void setLabelColor()
+    {
+        int r = random.nextInt(5);
+        switch(r){
+            case 0:
+             colorLabel.setForeground(Color.red);
+             break;
+            case 1:
+             colorLabel.setForeground(Color.yellow);
+             break;
+            case 2:
+             colorLabel.setForeground(Color.green);
+             break;
+            case 3:
+             colorLabel.setForeground(Color.blue);
+             break;
+            case 4:
+             colorLabel.setForeground(Color.magenta); 
+             break;  
+        }
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel colorName;
+    private javax.swing.JLabel colorLabel;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }
