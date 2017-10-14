@@ -38,14 +38,20 @@ public class CS245Project {
        StartupScreen s = new StartupScreen();
        s.setLocationRelativeTo(null);
        s.setVisible(true);
-       Thread.sleep(3000);
+       Thread.sleep(000);
        s.setVisible(false); //Close startup screen
        
-       JFrame obj = new JFrame();
-       obj.add(new JLabel(new ImageIcon("background.jpeg")));
-       obj.setMinimumSize(new Dimension(610, 439));
-       obj.setLocationRelativeTo(null); //Centers frame on screen2
-       obj.setVisible(true);
+//       JFrame obj = new JFrame();
+//       obj.add(new JLabel(new ImageIcon("background.jpeg")));
+//       obj.setMinimumSize(new Dimension(600, 400));
+//       obj.setLocationRelativeTo(null); //Centers frame on screen2
+//       obj.setVisible(true);
+
+       ColorTrap ct = new ColorTrap();
+       ct.add(new JLabel(new ImageIcon("background.jpeg")));
+       ct.setMinimumSize(new Dimension(600, 400));
+       ct.setLocationRelativeTo(null); //Centers frame on screen2
+       ct.setVisible(true);
        
        
     }

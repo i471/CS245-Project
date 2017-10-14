@@ -14,14 +14,30 @@ import java.awt.Color;
 import static jdk.nashorn.internal.objects.NativeMath.random;
 import java.awt.*;
 
+
 public class ColorTrap extends javax.swing.JFrame {
 
   Random random = new Random();
+  Stack<Color> lifo = new Stack();
+  
+  int[][][] XYCoordinates = 
+    {{{50, 100},{250, 100},{450, 100}, { 150,300}, {350,300}},
+        {{50, 300},{250, 300},{450, 300},{ 150,100},{350,100}},
+        {{250, 260},{490, 150},{90, 75},{50, 320},{350, 300}},
+        {{480, 190},{90, 300},{190, 113},{50, 200},{350, 320}}};
+       
     
     public ColorTrap() {
         initComponents();
-    }
 
+        lifo.push(Color.red);
+        lifo.push(Color.yellow);
+        lifo.push(Color.green);
+        lifo.push(Color.magenta);
+        lifo.push(Color.blue);
+    }
+    
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -119,20 +135,32 @@ public class ColorTrap extends javax.swing.JFrame {
     public void paint(Graphics g)
     {
         super.paint(g);
-       // drawCircle(g);
+        drawCircle(g);
         setLabelName();
         setLabelColor();
     }
     
-//    public void drawCircle(Graphics g)
-//    {
-//        nextColor(g);
-//        g.fillOval(50, 50, 50, 50);
-//        colorName.setForeground(Color.blue);
-//    }
+    public void drawCircle(Graphics g)
+    {
+        //nextColor(g);
+//        g.fillOval(480, 190, 100,100);
+//        g.fillOval(90, 300, 100,100);
+//        g.fillOval(190, 113, 100,100);
+//        g.fillOval(50, 200, 100,100);
+//        g.fillOval(350, 320, 100,100);
+
+        int i = random.nextInt(4);
+            for(int j=0 ; j<5 ; j++)//#CIRCLE
+            { 
+                nextCircleColor(g);
+                g.fillOval(XYCoordinates[i][j][0],XYCoordinates[i][j][1], 100,100);
+            }
+    }
 
     public void nextCircleColor(Graphics g)
     {
+//        g.setColor(lifo.peek());
+//        lifo.pop();
         int r = random.nextInt(5);
         switch(r){
             case 0:
