@@ -18,26 +18,27 @@ import java.awt.*;
 public class ColorTrap extends javax.swing.JFrame {
 
   Random random = new Random();
-  Stack<Color> lifo = new Stack();
-  
+  Stack <Color> lifo;  
   int[][][] XYCoordinates = 
     {{{50, 100},{250, 100},{450, 100}, { 150,300}, {350,300}},
         {{50, 300},{250, 300},{450, 300},{ 150,100},{350,100}},
         {{250, 260},{490, 150},{90, 75},{50, 320},{350, 300}},
         {{480, 190},{90, 300},{190, 113},{50, 200},{350, 320}}};
        
-    
-    public ColorTrap() {
-        initComponents();
-
+    private void pushStack()
+    {
+        lifo = new Stack();
         lifo.push(Color.red);
         lifo.push(Color.yellow);
         lifo.push(Color.green);
         lifo.push(Color.magenta);
         lifo.push(Color.blue);
     }
-    
-    
+    public ColorTrap() {
+        initComponents();
+        pushStack();  
+    }
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -120,15 +121,12 @@ public class ColorTrap extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(ColorTrap.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
-
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new ColorTrap().setVisible(true);
-             
+                new ColorTrap().setVisible(true);  
             }
-        });
-        
+        });        
     }
     
     @Override
@@ -155,31 +153,32 @@ public class ColorTrap extends javax.swing.JFrame {
                 nextCircleColor(g);
                 g.fillOval(XYCoordinates[i][j][0],XYCoordinates[i][j][1], 100,100);
             }
+            pushStack();
     }
 
     public void nextCircleColor(Graphics g)
     {
-//        g.setColor(lifo.peek());
-//        lifo.pop();
-        int r = random.nextInt(5);
-        switch(r){
-            case 0:
-             g.setColor(Color.red);
-             break;
-            case 1:
-             g.setColor(Color.yellow);
-             break;
-            case 2:
-             g.setColor(Color.green);  
-             break;
-            case 3:
-             g.setColor(Color.blue);  
-             break;
-            case 4:
-             g.setColor(Color.magenta);  
-             break;      
+        g.setColor(lifo.pop());
+//        int r = random.nextInt(5);
+//        switch(r){
+//            case 0:
+//             g.setColor(Color.red);
+//             break;
+//            case 1:
+//             g.setColor(Color.yellow);
+//             break;
+//            case 2:
+//             g.setColor(Color.green);  
+//             break;
+//            case 3:
+//             g.setColor(Color.blue);  
+//             break;
+//            case 4:
+//             g.setColor(Color.magenta);  
+//             break;      
         }
-    }
+    
+
     public void setLabelName()
     {
         int r = random.nextInt(5);
