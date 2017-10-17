@@ -22,7 +22,9 @@ public class HiyaGUI extends javax.swing.JFrame {
     private int numberOfGuesses = 0;
     private int score = 100;
     String answer = null;
-
+    int nameLength = rng.getName().length();
+    
+    
     @Override
     public Component add(Component comp) {
         return super.add(comp); //To change body of generated methods, choose Tools | Templates.
@@ -35,7 +37,8 @@ public class HiyaGUI extends javax.swing.JFrame {
       
        showDate();
        showTime();
-       drawUnderscores();
+       showName();
+       
        
        hangmanLabel.setText("HANGMAN");
     }
@@ -43,6 +46,7 @@ public class HiyaGUI extends javax.swing.JFrame {
     @Override
     public void paint(Graphics g){  
        super.paint(g);
+       drawUnderscores(g);
        drawHangManbase(g);
        
     }
@@ -95,8 +99,23 @@ public class HiyaGUI extends javax.swing.JFrame {
     }
     
    
-    public void drawUnderscores()
+    public void drawUnderscores(Graphics g)
     {
+        int x1, x2, y;
+        x1 = 70;
+        x2 =105;
+        y = 290;
+        
+        
+        for(int i =0 ; i < nameLength; i++){
+            g.drawLine(x1,y,x2,y);
+            x1 = x2 +5;
+            x2 += 45;
+           
+            
+        }
+        
+        /*
         boolean gameWin = false; 
         String s ="";
         for(int i = 0; i < rng.getLength(); i++)
@@ -104,6 +123,7 @@ public class HiyaGUI extends javax.swing.JFrame {
             s += " _ ";
         }
         answerHidden.setText(s);
+        */
     }
 
 
@@ -383,12 +403,13 @@ public class HiyaGUI extends javax.swing.JFrame {
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(38, 38, 38)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(name)
-                    .addComponent(nameSize))
-                .addContainerGap(153, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(name, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
+                        .addContainerGap(72, Short.MAX_VALUE)
+                        .addComponent(nameSize, javax.swing.GroupLayout.PREFERRED_SIZE, 0, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(198, 198, 198))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -452,9 +473,8 @@ public class HiyaGUI extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(hangmanLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(jPanelHang, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 103, Short.MAX_VALUE)
+                        .addComponent(jPanelHang, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 112, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                         .addGroup(layout.createSequentialGroup()
@@ -494,6 +514,9 @@ public class HiyaGUI extends javax.swing.JFrame {
                                 .addGap(27, 27, 27)
                                 .addComponent(time, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                 .addGap(24, 24, 24))
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
