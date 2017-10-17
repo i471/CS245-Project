@@ -24,10 +24,7 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.UIManager;
 
-/**
- *
- * @author Josh
- */
+
 public class RoundButton extends JButton{
 
 public RoundButton(String label) {
@@ -35,7 +32,6 @@ public RoundButton(String label) {
     Dimension size = getPreferredSize();
     size.width = size.height = Math.max(size.width,size.height);
     setPreferredSize(size);
-
     setContentAreaFilled(false);
   }
 
@@ -66,69 +62,14 @@ public RoundButton(String label) {
 
   public static void main(String[] args) {
     JButton button1 = new RoundButton("1");
-    JButton button2 = new RoundButton("2");
-    JButton button3 = new RoundButton("3");
-    JButton button4 = new RoundButton("4");
-    JButton button5 = new RoundButton("5");
-    
+   
     button1.setBackground(Color.red);
-    button2.setBackground(Color.yellow);
-    button3.setBackground(Color.blue);
-    button4.setBackground(Color.magenta);
-    button5.setBackground(Color.green);
     
-    button1.addMouseListener(new java.awt.event.MouseAdapter() {
-    public void mouseEntered(java.awt.event.MouseEvent evt) {
-        button1.setBackground(Color.gray);
-    }
-
-    public void mouseExited(java.awt.event.MouseEvent evt) {
-        button1.setBackground(Color.red);
-    }
-});
-    button2.addMouseListener(new java.awt.event.MouseAdapter() {
-    public void mouseEntered(java.awt.event.MouseEvent evt) {
-        button2.setBackground(Color.gray);
-    }
-
-    public void mouseExited(java.awt.event.MouseEvent evt) {
-        button2.setBackground(Color.yellow);
-    }
-});
-    button3.addMouseListener(new java.awt.event.MouseAdapter() {
-    public void mouseEntered(java.awt.event.MouseEvent evt) {
-        button3.setBackground(Color.gray);
-    }
-
-    public void mouseExited(java.awt.event.MouseEvent evt) {
-        button3.setBackground(Color.blue);
-    }
-});
-    button4.addMouseListener(new java.awt.event.MouseAdapter() {
-    public void mouseEntered(java.awt.event.MouseEvent evt) {
-        button4.setBackground(Color.gray);
-    }
-
-    public void mouseExited(java.awt.event.MouseEvent evt) {
-        button4.setBackground(Color.magenta);
-    }
-});
-    button5.addMouseListener(new java.awt.event.MouseAdapter() {
-    public void mouseEntered(java.awt.event.MouseEvent evt) {
-        button5.setBackground(Color.gray);
-    }
-
-    public void mouseExited(java.awt.event.MouseEvent evt) {
-        button5.setBackground(Color.green);
-    }
-});
+    
+ 
     
     JFrame frame = new JFrame();
     frame.getContentPane().add(button1);
-    frame.getContentPane().add(button2);
-    frame.getContentPane().add(button3);
-    frame.getContentPane().add(button4);
-    frame.getContentPane().add(button5);
     frame.getContentPane().setLayout(new FlowLayout());
     frame.setSize(600, 400);
     frame.setLocationRelativeTo(null);
