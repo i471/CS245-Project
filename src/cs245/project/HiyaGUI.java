@@ -860,11 +860,11 @@ public class HiyaGUI extends javax.swing.JFrame {
         {
             score -= 10;
             drawHangman(g, score);
-            System.out.print("Score: " + score);
+            System.out.println("Score: " + score);
         }
         else if(score == 50){
             score -= 10;
-        System.out.print("Score: " + score+ " You Lose!");
+        System.out.println("Score: " + score + " You Lose!");
         drawHangman(g,score);
         
     }
@@ -872,7 +872,7 @@ public class HiyaGUI extends javax.swing.JFrame {
             
             score -= 10; 
             drawHangman(g,score);
-            System.out.print("Score: " + score+ " You Lose!");
+            System.out.println("Score: " + score + " You Lose!");
             
         }
     }

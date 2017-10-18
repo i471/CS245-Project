@@ -56,11 +56,6 @@ public class ColorTrap extends javax.swing.JFrame implements MouseListener {
         getContentPane().add(b3);
         getContentPane().add(b4);
         getContentPane().add(b5);
-//        b1.addMouseListener(this);
-//        b2.addMouseListener(this);
-//        b3.addMouseListener(this);
-//        b4.addMouseListener(this);
-//        b5.addMouseListener(this);
     }
 
     public void addMouseLis() {
@@ -92,7 +87,6 @@ public class ColorTrap extends javax.swing.JFrame implements MouseListener {
         });
 
     }
-
     public void addActionLis() {
         b1.addActionListener(new java.awt.event.ActionListener() {public void actionPerformed(java.awt.event.ActionEvent evt) {b1ActionPerformed(evt);}});
         b2.addActionListener(new java.awt.event.ActionListener() {public void actionPerformed(java.awt.event.ActionEvent evt) {b2ActionPerformed(evt);}});
@@ -139,7 +133,11 @@ public class ColorTrap extends javax.swing.JFrame implements MouseListener {
     public void paint(Graphics g) {
         if(numTries == 0)
         {
+            this.dispose();
             HighscoreFrame hsf = new HighscoreFrame();
+            hsf.setLocationRelativeTo(null);
+            hsf.setVisible(true);
+           
         }
         super.paint(g);
         drawCircle(g);
@@ -175,23 +173,18 @@ public class ColorTrap extends javax.swing.JFrame implements MouseListener {
         switch (r) {
             case 0:
                 colorLabel.setText("RED");
-                answer = "RED";
                 break;
             case 1:
-                colorLabel.setText("YELLOW");
-                answer = "YELLOW";
+                colorLabel.setText("YELLOW");              
                 break;
             case 2:
-                colorLabel.setText("GREEN");
-                answer = "GREEN";
+                colorLabel.setText("GREEN");                
                 break;
             case 3:
-                colorLabel.setText("BLUE");
-                answer = "BLUE";
+                colorLabel.setText("BLUE");                
                 break;
             case 4:
-                colorLabel.setText("MAGENTA");
-                answer = "MAGENTA";
+                colorLabel.setText("MAGENTA");             
                 break;
         }
     }
@@ -201,51 +194,56 @@ public class ColorTrap extends javax.swing.JFrame implements MouseListener {
         switch (r) {
             case 0:
                 colorLabel.setForeground(Color.red);
+                answer = "RED";
                 break;
             case 1:
                 colorLabel.setForeground(Color.yellow);
+                answer = "YELLOW";
                 break;
             case 2:
                 colorLabel.setForeground(Color.green);
+                answer = "GREEN";
                 break;
             case 3:
                 colorLabel.setForeground(Color.blue);
+                answer = "BLUE";
                 break;
             case 4:
                 colorLabel.setForeground(Color.magenta);
+                answer = "MAGENTA";
                 break;
         }
     }
 
-    private void b1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_yellowButtonActionPerformed
+    private void b1ActionPerformed(java.awt.event.ActionEvent evt) {                                             
         if(answer == "YELLOW")
             points = points + 100;
         --numTries;
         repaint();
     }
 
-    private void b2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_yellowButtonActionPerformed
+    private void b2ActionPerformed(java.awt.event.ActionEvent evt) {                                             
         if(answer == "RED")
             points = points + 100;
         --numTries;
         repaint();
     }
 
-    private void b3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_yellowButtonActionPerformed
+    private void b3ActionPerformed(java.awt.event.ActionEvent evt) {                                             
        if(answer == "BLUE")
             points = points + 100;
         --numTries;
         repaint();
     }
 
-    private void b4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_yellowButtonActionPerformed
+    private void b4ActionPerformed(java.awt.event.ActionEvent evt) {                                             
        if(answer == "GREEN")
             points = points + 100;
         --numTries;
         repaint();
     }
 
-    private void b5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_yellowButtonActionPerformed
+    private void b5ActionPerformed(java.awt.event.ActionEvent evt) {                                             
         if(answer == "MAGENTA")
             points = points + 100;
         --numTries;
