@@ -6,12 +6,17 @@
 package cs245.project;
 import java.awt.Color;
 import java.awt.Component;
+import java.awt.Dimension;
 import java.awt.Graphics;
+import java.awt.List;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
 import java.util.Locale;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 /**
  *
  * @author Team KickAss
@@ -22,6 +27,7 @@ public class HiyaGUI extends javax.swing.JFrame {
     private int numberOfGuesses = 0;
     public int score = 100;
     String answer = null;
+     ArrayList<String> answ = new ArrayList<String>();
     int nameLength = rng.getName().length();
     
     
@@ -30,6 +36,16 @@ public class HiyaGUI extends javax.swing.JFrame {
         return super.add(comp); //To change body of generated methods, choose Tools | Templates.
     }
 
+    
+    public void nextGame(int score)
+    {
+       this.dispose();
+       //this.setVisible(false);
+       ColorTrap cTrap = new ColorTrap();
+       cTrap.setLocationRelativeTo(null);
+       cTrap.setMinimumSize(new Dimension(600, 400));
+       cTrap.setVisible(true);
+    }
     
     int timeLoop = 0;    // creates new form of HiyaGUI
     public HiyaGUI() {
@@ -96,37 +112,89 @@ public class HiyaGUI extends javax.swing.JFrame {
     // just to test 
     public void showName(){
         name.setText(rng.getName());
+        
     }
     
    
     public void drawUnderscores(Graphics g)
     {
-        int x1, x2, y;
-        x1 = 70;
-        x2 =105;
-        y = 290;
+        String answStr = "";
+       
         
-        
-        for(int i =0 ; i < nameLength; i++){
-            g.drawLine(x1,y,x2,y);
-            x1 = x2 +5;
-            x2 += 45;
-           
-            
-        }
-        
-        /*
-        boolean gameWin = false; 
-        String s ="";
-        for(int i = 0; i < rng.getLength(); i++)
+        for(int i =0 ; i < nameLength; i++)
         {
-            s += " _ ";
+            answ.add  ("   _____   ");
+            answStr += "   _____   ";
         }
-        answerHidden.setText(s);
-        */
+        
+        jLabel1.setText(answStr);
+    }
+    
+    public Integer[] getGuessIndex(char guess)
+    {
+        ArrayList<Integer> positions = new ArrayList<Integer>();
+        
+        for(int i = 0; i < name.getText().length(); i ++)
+        {
+            if(guess == name.getText().charAt(i))
+            {
+                positions.add(i);
+            }
+        }
+        
+        Integer [] arr = new Integer[positions.size()];
+        positions.toArray(arr);
+        
+        return arr;
+        
     }
 
-
+    public void drawAnswer(Integer arr[], String guess)
+    {
+        String setAnsw = "";
+        int j = 0;
+        for(int i = 0 ; i < name.getText().length(); i ++)
+        {
+            if(j < arr.length)
+            {
+                if(arr[j] == i)
+                {
+                    answ.set(i, "        " + guess + "       ");
+                    //setAnsw += ("   " + guess + "    ");
+                    j++;
+                }
+            }
+        }
+        
+        for(int i = 0; i < answ.size(); i ++)
+        {
+            setAnsw += answ.get(i);
+        }
+       
+        jLabel1.setText(setAnsw);
+        
+        if(playerWin())
+        {
+            System.out.print("You Win!");
+            nextGame(score);
+        }
+        
+    }
+    
+    public boolean playerWin()
+    {
+        boolean noUnderscores = true;
+        
+        for(int i = 0; i < answ.size(); i ++)
+        {
+            if(answ.get(i).equals("   _____   "))
+            {
+                noUnderscores = false;
+            }
+        }
+        
+        return noUnderscores;
+    }
    
     
 
@@ -195,6 +263,7 @@ public class HiyaGUI extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         nameSize = new javax.swing.JLabel();
         name = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
         jButtonSkip = new javax.swing.JButton();
         hangmanLabel = new javax.swing.JLabel();
 
@@ -399,6 +468,9 @@ public class HiyaGUI extends javax.swing.JFrame {
 
         name.setText("name");
 
+        jLabel1.setText("Answer");
+        jLabel1.setName("answerString"); // NOI18N
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -407,9 +479,13 @@ public class HiyaGUI extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(name, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
-                        .addContainerGap(72, Short.MAX_VALUE)
+                        .addContainerGap(423, Short.MAX_VALUE)
                         .addComponent(nameSize, javax.swing.GroupLayout.PREFERRED_SIZE, 0, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(198, 198, 198))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 541, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -418,7 +494,8 @@ public class HiyaGUI extends javax.swing.JFrame {
                 .addComponent(nameSize)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(name)
-                .addContainerGap(43, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 37, Short.MAX_VALUE))
         );
 
         jButtonSkip.setText("Skip");
@@ -474,7 +551,7 @@ public class HiyaGUI extends javax.swing.JFrame {
                         .addComponent(hangmanLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(jPanelHang, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 112, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                         .addGroup(layout.createSequentialGroup()
@@ -576,6 +653,8 @@ public class HiyaGUI extends javax.swing.JFrame {
     private void jButtonAMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonAMouseClicked
         jButtonA.setEnabled(false);        // TODO add your handling code here:
         if(isInWord("a")){
+            Integer arr[] = getGuessIndex('a');
+            drawAnswer(arr, "a");
         }  
         else{
             wrongGuess();
@@ -585,7 +664,8 @@ public class HiyaGUI extends javax.swing.JFrame {
     private void jButtonBMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonBMouseClicked
         jButtonB.setEnabled(false);        // TODO add your handling code here:
         if(isInWord("b")){
-            
+            Integer arr[] = getGuessIndex('b');
+            drawAnswer(arr, "b");
         }  
         else{
             wrongGuess();
@@ -595,7 +675,8 @@ public class HiyaGUI extends javax.swing.JFrame {
     private void jButtonCMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonCMouseClicked
         jButtonC.setEnabled(false);// TODO add your handling code here:
         if(isInWord("c")){
-            
+            Integer arr[] = getGuessIndex('c');
+            drawAnswer(arr, "c");
         }  
         else{
             wrongGuess();
@@ -605,7 +686,8 @@ public class HiyaGUI extends javax.swing.JFrame {
     private void jButtonDMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonDMouseClicked
         jButtonD.setEnabled(false);        // TODO add your handling code here:
         if(isInWord("d")){
-            
+            Integer arr[] = getGuessIndex('d');
+            drawAnswer(arr, "d");
         }  
         else{
             wrongGuess();
@@ -615,7 +697,8 @@ public class HiyaGUI extends javax.swing.JFrame {
     private void jButtonEMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonEMouseClicked
         jButtonE.setEnabled(false);        // TODO add your handling code here:
         if(isInWord("e")){
-            
+            Integer arr[] = getGuessIndex('e');
+            drawAnswer(arr, "e");
         }  
         else{
             wrongGuess();
@@ -625,7 +708,8 @@ public class HiyaGUI extends javax.swing.JFrame {
     private void jButtonFMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonFMouseClicked
         jButtonF.setEnabled(false);        // TODO add your handling code here:
         if(isInWord("f")){
-            
+            Integer arr[] = getGuessIndex('f');
+            drawAnswer(arr, "f");
         }  
         else{
             wrongGuess();
@@ -635,7 +719,8 @@ public class HiyaGUI extends javax.swing.JFrame {
     private void jButtonGMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonGMouseClicked
         jButtonG.setEnabled(false);        // TODO add your handling code here:
         if(isInWord("g")){
-            
+            Integer arr[] = getGuessIndex('g');
+            drawAnswer(arr, "g");
         }  
         else{
             wrongGuess();
@@ -645,7 +730,8 @@ public class HiyaGUI extends javax.swing.JFrame {
     private void jButtonHMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonHMouseClicked
         jButtonH.setEnabled(false);        // TODO add your handling code here:
         if(isInWord("h")){
-            
+            Integer arr[] = getGuessIndex('h');
+            drawAnswer(arr, "h");
         }  
         else{
             wrongGuess();
@@ -655,7 +741,8 @@ public class HiyaGUI extends javax.swing.JFrame {
     private void jButtonIMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonIMouseClicked
         jButtonI.setEnabled(false);        // TODO add your handling code here:
         if(isInWord("i")){
-            
+            Integer arr[] = getGuessIndex('i');
+            drawAnswer(arr, "i");
         }  
         else{
             wrongGuess();
@@ -665,7 +752,8 @@ public class HiyaGUI extends javax.swing.JFrame {
     private void jButtonJMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonJMouseClicked
         jButtonJ.setEnabled(false);        // TODO add your handling code here:
         if(isInWord("j")){
-            
+            Integer arr[] = getGuessIndex('j');
+            drawAnswer(arr, "j");
         }  
         else{
             wrongGuess();
@@ -675,7 +763,8 @@ public class HiyaGUI extends javax.swing.JFrame {
     private void jButtonKMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonKMouseClicked
         jButtonK.setEnabled(false);        // TODO add your handling code here:
         if(isInWord("k")){
-            
+            Integer arr[] = getGuessIndex('k');
+            drawAnswer(arr, "k");
         }  
         else{
             wrongGuess();
@@ -685,7 +774,8 @@ public class HiyaGUI extends javax.swing.JFrame {
     private void jButtonLMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonLMouseClicked
         jButtonL.setEnabled(false);        // TODO add your handling code here:
         if(isInWord("l")){
-            
+            Integer arr[] = getGuessIndex('l');
+            drawAnswer(arr, "l");
         }  
         else{
             wrongGuess();
@@ -695,7 +785,8 @@ public class HiyaGUI extends javax.swing.JFrame {
     private void jButtonMMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonMMouseClicked
         jButtonM.setEnabled(false);        // TODO add your handling code here:
         if(isInWord("m")){
-            
+            Integer arr[] = getGuessIndex('m');
+            drawAnswer(arr, "m");
         }  
         else{
             wrongGuess();
@@ -705,7 +796,8 @@ public class HiyaGUI extends javax.swing.JFrame {
     private void jButtonNMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonNMouseClicked
         jButtonN.setEnabled(false);        // TODO add your handling code here:
         if(isInWord("n")){
-            
+            Integer arr[] = getGuessIndex('n');
+            drawAnswer(arr, "n");
         }  
         else{
             wrongGuess();
@@ -715,7 +807,8 @@ public class HiyaGUI extends javax.swing.JFrame {
     private void jButtonOMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonOMouseClicked
         jButtonO.setEnabled(false);        // TODO add your handling code here:
         if(isInWord("o")){
-            
+            Integer arr[] = getGuessIndex('o');
+            drawAnswer(arr, "o");
         }  
         else{
             wrongGuess();
@@ -725,7 +818,8 @@ public class HiyaGUI extends javax.swing.JFrame {
     private void jButtonPMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonPMouseClicked
         jButtonP.setEnabled(false);        // TODO add your handling code here:
         if(isInWord("p")){
-            
+            Integer arr[] = getGuessIndex('p');
+            drawAnswer(arr, "p");
         }  
         else{
             wrongGuess();
@@ -735,7 +829,8 @@ public class HiyaGUI extends javax.swing.JFrame {
     private void jButtonQMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonQMouseClicked
         jButtonQ.setEnabled(false);        // TODO add your handling code here:
         if(isInWord("q")){
-            
+            Integer arr[] = getGuessIndex('q');
+            drawAnswer(arr, "q");
         }  
         else{
             wrongGuess();
@@ -745,7 +840,8 @@ public class HiyaGUI extends javax.swing.JFrame {
     private void jButtonRMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonRMouseClicked
         jButtonR.setEnabled(false);        // TODO add your handling code here:
         if(isInWord("r")){
-            
+            Integer arr[] = getGuessIndex('r');
+            drawAnswer(arr, "r");
         }  
         else{
             wrongGuess();
@@ -755,7 +851,8 @@ public class HiyaGUI extends javax.swing.JFrame {
     private void jButtonSMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonSMouseClicked
         jButtonS.setEnabled(false);        // TODO add your handling code here:
         if(isInWord("s")){
-            
+            Integer arr[] = getGuessIndex('s');
+            drawAnswer(arr, "s");
         }  
         else{
             wrongGuess();
@@ -765,7 +862,8 @@ public class HiyaGUI extends javax.swing.JFrame {
     private void jButtonTMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonTMouseClicked
         jButtonT.setEnabled(false);        // TODO add your handling code here:
         if(isInWord("t")){
-            
+            Integer arr[] = getGuessIndex('t');
+            drawAnswer(arr, "t");
         }  
         else{
             wrongGuess();
@@ -775,7 +873,8 @@ public class HiyaGUI extends javax.swing.JFrame {
     private void jButtonUMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonUMouseClicked
         jButtonU.setEnabled(false);        // TODO add your handling code here:
         if(isInWord("u")){
-            
+            Integer arr[] = getGuessIndex('u');
+            drawAnswer(arr, "u");
         }  
         else{
             wrongGuess();
@@ -785,7 +884,8 @@ public class HiyaGUI extends javax.swing.JFrame {
     private void jButtonVMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonVMouseClicked
         jButtonV.setEnabled(false);        // TODO add your handling code here:
         if(isInWord("v")){
-            
+            Integer arr[] = getGuessIndex('v');
+            drawAnswer(arr, "v");
         }  
         else{
             wrongGuess();
@@ -795,7 +895,8 @@ public class HiyaGUI extends javax.swing.JFrame {
     private void jButtonWMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonWMouseClicked
         jButtonW.setEnabled(false);        // TODO add your handling code here:
         if(isInWord("w")){
-            
+            Integer arr[] = getGuessIndex('w');
+            drawAnswer(arr, "w");
         }  
         else{
             wrongGuess();
@@ -805,7 +906,8 @@ public class HiyaGUI extends javax.swing.JFrame {
     private void jButtonXMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonXMouseClicked
         jButtonX.setEnabled(false);        // TODO add your handling code here:
         if(isInWord("x")){
-            
+            Integer arr[] = getGuessIndex('x');
+            drawAnswer(arr, "x");
         }  
         else{
             wrongGuess();
@@ -815,7 +917,8 @@ public class HiyaGUI extends javax.swing.JFrame {
     private void jButtonYMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonYMouseClicked
         jButtonY.setEnabled(false);        // TODO add your handling code here:
         if(isInWord("y")){
-            
+            Integer arr[] = getGuessIndex('y');
+            drawAnswer(arr, "y");
         }  
         else{
             wrongGuess();
@@ -825,7 +928,8 @@ public class HiyaGUI extends javax.swing.JFrame {
     private void jButtonZMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonZMouseClicked
         jButtonZ.setEnabled(false);        // TODO add your handling code here:
         if(isInWord("z")){
-            
+            Integer arr[] = getGuessIndex('z');
+            drawAnswer(arr, "z");
         }  
         else{
             wrongGuess();
@@ -860,7 +964,6 @@ public class HiyaGUI extends javax.swing.JFrame {
         {
             score -= 10;
             drawHangman(g, score);
-            System.out.println("Score: " + score);
         }
         else if(score == 50){
             score -= 10;
@@ -946,6 +1049,7 @@ public class HiyaGUI extends javax.swing.JFrame {
     private javax.swing.JButton jButtonX;
     private javax.swing.JButton jButtonY;
     private javax.swing.JButton jButtonZ;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JList<String> jList1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanelHang;
