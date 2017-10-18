@@ -20,7 +20,7 @@ public class HiyaGUI extends javax.swing.JFrame {
 
     RandomNameGenerator rng = new RandomNameGenerator();
     private int numberOfGuesses = 0;
-    private int score = 100;
+    public int score = 100;
     String answer = null;
     int nameLength = rng.getName().length();
     

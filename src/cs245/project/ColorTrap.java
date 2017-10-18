@@ -18,7 +18,8 @@ import java.awt.event.MouseListener;
 import javax.swing.JPanel;
 
 public class ColorTrap extends javax.swing.JFrame implements MouseListener {
-
+    
+    HiyaGUI HG = new HiyaGUI();
     RoundButton b1 = new RoundButton("1");
     RoundButton b2 = new RoundButton("2");
     RoundButton b3 = new RoundButton("3");
@@ -35,7 +36,7 @@ public class ColorTrap extends javax.swing.JFrame implements MouseListener {
     
     int numTries = 5;
     
-    int points = 0;
+    int points = HG.score;
 
     int[][][] XYCoordinates
             = {{{50, 100}, {250, 100}, {450, 100}, {150, 300}, {350, 300}},
