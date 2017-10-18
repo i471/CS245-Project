@@ -37,7 +37,7 @@ public class HiyaGUI extends javax.swing.JFrame {
     }
 
     
-    public void nextGame(int score)
+    public void nextGame()
     {
        this.dispose();
        //this.setVisible(false);
@@ -176,7 +176,7 @@ public class HiyaGUI extends javax.swing.JFrame {
         if(playerWin())
         {
             System.out.print("You Win!");
-            nextGame(score);
+            nextGame();
         }
         
     }
