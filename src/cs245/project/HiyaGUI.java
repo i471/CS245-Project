@@ -941,6 +941,8 @@ public class HiyaGUI extends javax.swing.JFrame {
         this.setVisible(false);
         skip.setVisible(true);   
         skip.setLocationRelativeTo(null);
+        score = 0;
+        System.out.println(score);
         // TODO add your handling code here:
     }//GEN-LAST:event_jButtonSkipActionPerformed
 
