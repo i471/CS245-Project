@@ -36,7 +36,7 @@ public class ColorTrap extends javax.swing.JFrame implements MouseListener {
     
     int numTries = 5;
     
-    int points = HG.score;
+    int points;// = HG.score;
 
     int[][][] XYCoordinates
             = {{{50, 100}, {250, 100}, {450, 100}, {150, 300}, {350, 300}},
@@ -44,11 +44,12 @@ public class ColorTrap extends javax.swing.JFrame implements MouseListener {
             {{250, 260}, {490, 150}, {90, 75}, {50, 320}, {350, 300}},
             {{480, 190}, {90, 300}, {190, 113}, {50, 200}, {350, 320}}};
 
-    public ColorTrap() {
+    public ColorTrap(int hgScore) {
         initComponents();
         addButtons();
         addMouseLis();
         addActionLis();
+        points = hgScore;
     }
 
     public void addButtons() {
@@ -135,7 +136,7 @@ public class ColorTrap extends javax.swing.JFrame implements MouseListener {
         if(numTries == 0)
         {
             this.dispose();
-            HighscoreFrame hsf = new HighscoreFrame();
+            HighscoreFrame hsf = new HighscoreFrame(points);
             hsf.setLocationRelativeTo(null);
             hsf.setVisible(true);
            

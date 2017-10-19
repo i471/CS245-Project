@@ -37,11 +37,11 @@ public class HiyaGUI extends javax.swing.JFrame {
     }
 
     
-    public void nextGame()
+    public void nextGame(int hgScore)
     {
        this.dispose();
        //this.setVisible(false);
-       ColorTrap cTrap = new ColorTrap();
+       ColorTrap cTrap = new ColorTrap(score);
        cTrap.setLocationRelativeTo(null);
        cTrap.setMinimumSize(new Dimension(600, 400));
        cTrap.setVisible(true);
@@ -176,7 +176,7 @@ public class HiyaGUI extends javax.swing.JFrame {
         if(playerWin())
         {
             System.out.print("You Win!");
-            nextGame();
+            nextGame(score);
         }
         
     }
@@ -962,23 +962,10 @@ public class HiyaGUI extends javax.swing.JFrame {
 
 
         if(score >= 60)
-
         {
             score -= 10;
             drawHangman(g, score);
-        }
-        else if(score == 50){
-            score -= 10;
-        System.out.println("Score: " + score + " You Lose!");
-        drawHangman(g,score);
-        
-    }
-        else if (score > 40){
-            
-            score -= 10; 
-            drawHangman(g,score);
-            System.out.println("Score: " + score + " You Lose!");
-            
+            System.out.print("score: " + score);
         }
     }
     

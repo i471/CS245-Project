@@ -82,7 +82,7 @@ public class SkipFrame extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        ColorTrap CT = new ColorTrap();
+        ColorTrap CT = new ColorTrap(0);
        
        CT.setMinimumSize(new Dimension(610, 439));
        CT.setLocationRelativeTo(null); //Centers frame on screen2

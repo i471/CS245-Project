@@ -93,7 +93,7 @@ public class JFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_jButtonPlayActionPerformed
 
     private void jButtonHighscoresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonHighscoresActionPerformed
-       HighscoreFrame obj = new HighscoreFrame();
+       HighscoreFrame obj = new HighscoreFrame(-1);
        obj.setMinimumSize(new Dimension(600, 400));
        obj.setLocationRelativeTo(null); //Centers frame on screen2
        this.setVisible(false);
