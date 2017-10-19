@@ -58,6 +58,7 @@ public class HiyaGUI extends javax.swing.JFrame {
        
        
        hangmanLabel.setText("HANGMAN");
+       name.setVisible(false);
     }
     
     @Override
