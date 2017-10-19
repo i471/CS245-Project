@@ -15,6 +15,9 @@ import static jdk.nashorn.internal.objects.NativeMath.random;
 import java.awt.*;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JPanel;
 
 public class ColorTrap extends javax.swing.JFrame implements MouseListener {

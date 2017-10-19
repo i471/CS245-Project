@@ -29,15 +29,15 @@ public class HighscoreFrame extends javax.swing.JFrame {
     /**
      * Creates new form HighscoreFrame
      */
-    public HighscoreFrame(int score) {
+   public HighscoreFrame(int score) 
+   {
         initComponents();
         highlightTextField();
         if(score != -1)
         {
             highScoreLabel1.setText(Integer.toString(score));
-            previousScores.setVisible(false);
             initials.setVisible(false);
-            
+            previousScores.setVisible(false);
         }
         else
         {
@@ -45,22 +45,73 @@ public class HighscoreFrame extends javax.swing.JFrame {
         }
     }
 
-    public void highlightTextField(){
+    public void highlightTextField()
+    {
         init1TextField.selectAll();
     }
     
     public void staticScores()
     {
-        
-        init1TextField.setEditable(false);
         init1TextField.setVisible(false);
         highScoreLabel1.setVisible(false);
-        previousScores.setVisible(true);
-        initials.setVisible(true);
         jButton2.setVisible(false);
+        initials.setVisible(false);
+        previousScores.setVisible(false);
+        try 
+        {
+            readScores();
+            displayScores();
+            initials.setVisible(true);
+            previousScores.setVisible(true);
+        } 
+        catch (IOException ex) 
+        {
+            Logger.getLogger(HighscoreFrame.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+    
+    public void displayScores()
+    {
+        String initOutput = "";
+        String scoreOutput = "";
+        for(int i = 0; i < scoreList.size() && i < 5; i ++)
+        {
+            initOutput += ("<html>" + scoreList.get(i).getInitials() + "<br><br>");
+            scoreOutput +=("<html>" + scoreList.get(i).getScore() + "<br><br>");
+            System.out.print(i);
+        }
+        initOutput += "</html>";
+        scoreOutput += "</html>";
+        initials.setText(initOutput);
+        previousScores.setText(scoreOutput);
         
     }
    
+    public void readScores() throws FileNotFoundException, IOException
+    {
+        BufferedReader br = new BufferedReader(new FileReader("scores.txt"));
+        try 
+        {
+            StringBuilder sb = new StringBuilder();
+            String line = br.readLine();
+            String initials = "";
+            String playerScore =  "";
+
+            while (line != null) 
+            {
+                initials = line;
+                playerScore = br.readLine();
+                Score score = new Score(initials, playerScore);
+                scoreList.add(score);
+                line = br.readLine();
+            }
+            String everything = sb.toString();
+        } 
+        finally 
+        {
+            br.close();
+        }
+    }
     
     public void saveScore() throws IOException
     {
@@ -136,10 +187,10 @@ public class HighscoreFrame extends javax.swing.JFrame {
                         .addGap(22, 22, 22)
                         .addComponent(jButton1))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(150, 150, 150)
+                        .addGap(140, 140, 140)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
-                                .addGap(57, 57, 57)
+                                .addGap(67, 67, 67)
                                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -149,7 +200,7 @@ public class HighscoreFrame extends javax.swing.JFrame {
                                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addGroup(layout.createSequentialGroup()
                                         .addComponent(previousScores, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(50, 50, 50)
+                                        .addGap(60, 60, 60)
                                         .addComponent(initials, javax.swing.GroupLayout.DEFAULT_SIZE, 47, Short.MAX_VALUE)))
                                 .addGap(32, 32, 32)
                                 .addComponent(jButton2)))))
@@ -165,11 +216,11 @@ public class HighscoreFrame extends javax.swing.JFrame {
                     .addComponent(highScoreLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton2))
-                .addGap(18, 18, 18)
+                .addGap(46, 46, 46)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(previousScores, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(initials, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 137, Short.MAX_VALUE)
+                    .addComponent(previousScores, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(initials, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 9, Short.MAX_VALUE)
                 .addComponent(jButton1)
                 .addGap(21, 21, 21))
         );

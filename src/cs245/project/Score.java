@@ -14,6 +14,11 @@ public class Score
     String initials;
     String score;
 
+    public Score(String setInit, String setScore)
+    {
+        initials = setInit;
+        score = setScore;
+    }
     public String getInitials() {
         return initials;
     }
