@@ -24,6 +24,7 @@ import java.util.logging.Logger;
 public class HiyaGUI extends javax.swing.JFrame {
 
     RandomNameGenerator rng = new RandomNameGenerator();
+    
     private int numberOfGuesses = 0;
     public int score = 100;
     String answer = null;
@@ -214,7 +215,6 @@ public class HiyaGUI extends javax.swing.JFrame {
              case (50): g.drawLine(400, 175, 425, 150); //right arm
              break;
              case (40): g.drawLine(400, 175, 375, 150); // left arm
-
              break;
          }
     }
@@ -961,12 +961,21 @@ public class HiyaGUI extends javax.swing.JFrame {
         Graphics g = this.getGraphics();
 
 
-        if(score >= 60)
+        if(score >= 50)
         {
             score -= 10;
             drawHangman(g, score);
             System.out.print("score: " + score);
         }
+        if(score == 40){
+            ColorTrap CT = new ColorTrap(0);
+            drawHangman(g, score);
+            System.out.println(" You lose");
+            this.setVisible(false);
+            CT.setVisible(true);
+            
+        }
+        
     }
     
     
