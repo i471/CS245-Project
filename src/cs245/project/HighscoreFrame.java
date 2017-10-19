@@ -62,7 +62,9 @@ public class HighscoreFrame extends javax.swing.JFrame {
             readScores();
             displayScores();
             initials.setVisible(true);
+            initials.setVerticalTextPosition(JLabel.TOP);
             previousScores.setVisible(true);
+            previousScores.setVerticalTextPosition(JLabel.TOP);
         } 
         catch (IOException ex) 
         {
@@ -72,18 +74,21 @@ public class HighscoreFrame extends javax.swing.JFrame {
     
     public void displayScores()
     {
-        String initOutput = "";
-        String scoreOutput = "";
-        for(int i = 0; i < scoreList.size() && i < 5; i ++)
+        if(!scoreList.isEmpty())
         {
-            initOutput += ("<html>" + scoreList.get(i).getInitials() + "<br><br>");
-            scoreOutput +=("<html>" + scoreList.get(i).getScore() + "<br><br>");
-            System.out.print(i);
+            String initOutput = "";
+            String scoreOutput = "";
+            for(int i = 0; i < scoreList.size() && i < 5; i ++)
+            {
+                initOutput += ("<html>" + scoreList.get(i).getInitials() + "<br><br>");
+                scoreOutput +=("<html>" + scoreList.get(i).getScore() + "<br><br>");
+                System.out.print(i);
+            }
+            initOutput += "</html>";
+            scoreOutput += "</html>";
+            initials.setText(initOutput);
+            previousScores.setText(scoreOutput);
         }
-        initOutput += "</html>";
-        scoreOutput += "</html>";
-        initials.setText(initOutput);
-        previousScores.setText(scoreOutput);
         
     }
    
@@ -173,10 +178,6 @@ public class HighscoreFrame extends javax.swing.JFrame {
             }
         });
 
-        previousScores.setText("Previous Scores");
-
-        initials.setText("Initials");
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -245,7 +246,12 @@ public class HighscoreFrame extends javax.swing.JFrame {
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         try {
             // makes text field unwritable
-            
+            this.dispose();
+            JFrame obj = new JFrame();
+            obj.add(new JLabel(new ImageIcon("background.jpeg")));
+            obj.setMinimumSize(new Dimension(600, 400));
+            obj.setLocationRelativeTo(null); //Centers frame on screen2
+            obj.setVisible(true);
             init1TextField.setEditable(false);
             
             saveScore();
