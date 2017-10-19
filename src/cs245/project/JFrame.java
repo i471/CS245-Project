@@ -74,10 +74,10 @@ public class JFrame extends javax.swing.JFrame {
         getContentPane().add(jButtonCredits);
         jButtonCredits.setBounds(460, 340, 110, 23);
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/cs245/project/background.jpg"))); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/cs245/project/BetterWolf.jpg"))); // NOI18N
         jLabel2.setToolTipText("");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(0, 0, 600, 400);
+        jLabel2.setBounds(0, -20, 600, 400);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
