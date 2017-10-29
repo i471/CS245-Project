@@ -1,20 +1,11 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package cs245.project;
 import java.awt.*;        // Uses AWT's Layout Managers
 import java.awt.event.*;  // Uses AWT's Event Handlers
 import java.util.Arrays;
 import javax.swing.*;     // Uses Swing's Container/Components
 import javax.swing.border.Border;
- 
-/**
- * The Sudoku game.
- * To solve the number puzzle, each row, each column, and each of the
- * nine 3×3 sub-grids shall contain all of the digits from 1 to 9
- */
+
 public class Sudoku extends javax.swing.JFrame 
 {
     
@@ -39,11 +30,7 @@ public class Sudoku extends javax.swing.JFrame
    // The game board composes of 9x9 JTextFields,
    // each containing String "1" to "9", or empty String
    private JTextField[][] tfCells = new JTextField[GRID_SIZE][GRID_SIZE];
- 
-   // Puzzle to be solved and the mask (which can be used to control the
-   //  difficulty level).
-   // Hardcoded here. Extra credit for automatic puzzle generation
-   //  with various difficulty levels.
+
    private int[][] puzzle =
       {{8, 3, 5, 4, 1, 6, 9, 2, 7},
        {2, 9, 6, 8, 5, 7, 4, 3, 1},
