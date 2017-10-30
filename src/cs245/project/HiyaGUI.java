@@ -9,6 +9,8 @@ import java.awt.Component;
 import java.awt.Dimension;
 import java.awt.Graphics;
 import java.awt.List;
+import java.awt.event.ActionEvent;
+import java.awt.event.KeyEvent;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -17,6 +19,9 @@ import java.util.GregorianCalendar;
 import java.util.Locale;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.AbstractAction;
+import javax.swing.JComponent;
+import javax.swing.KeyStroke;
 /**
  *
  * @author Team KickAss
@@ -51,7 +56,7 @@ public class HiyaGUI extends javax.swing.JFrame {
     int timeLoop = 0;    // creates new form of HiyaGUI
     public HiyaGUI() {
        initComponents();
-      
+       escapeKey();
        showDate();
        showTime();
        showName();
@@ -977,6 +982,16 @@ public class HiyaGUI extends javax.swing.JFrame {
             
         }
         
+    }
+    public final void escapeKey() {
+        getRootPane().getInputMap(JComponent.WHEN_IN_FOCUSED_WINDOW).put(
+                KeyStroke.getKeyStroke(KeyEvent.VK_ESCAPE, 0), "Cancel");
+        getRootPane().getActionMap().put("Cancel", new AbstractAction() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                System.exit(0);
+            }
+        });
     }
     
     

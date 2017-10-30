@@ -14,14 +14,19 @@ import java.awt.Dimension;
 import java.awt.FlowLayout;
 import java.awt.Graphics;
 import java.awt.Shape;
+import java.awt.event.ActionEvent;
+import java.awt.event.KeyEvent;
 import java.awt.geom.Ellipse2D;
 import java.net.MalformedURLException;
 import java.net.URL;
+import javax.swing.AbstractAction;
 import javax.swing.BorderFactory;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
+import javax.swing.JComponent;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
+import javax.swing.KeyStroke;
 import javax.swing.UIManager;
 
 
@@ -32,6 +37,7 @@ public RoundButton(String label) {
     Dimension size = getPreferredSize();
     size.width = size.height = Math.max(size.width,size.height);
     setPreferredSize(size);
+    escapeKey();
     setContentAreaFilled(false);
   }
 
@@ -59,6 +65,18 @@ public RoundButton(String label) {
     }
     return shape.contains(x, y);
   }
+  
+  public final void escapeKey() {
+        getRootPane().getInputMap(JComponent.WHEN_IN_FOCUSED_WINDOW).put(
+                KeyStroke.getKeyStroke(KeyEvent.VK_ESCAPE, 0), "Cancel");
+        getRootPane().getActionMap().put("Cancel", new AbstractAction() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                System.exit(0);
+            }
+        });
+    }
+  
 
   public static void main(String[] args) {
     JButton button1 = new RoundButton("1");

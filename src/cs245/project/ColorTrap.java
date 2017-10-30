@@ -13,12 +13,17 @@ import java.util.*;
 import java.awt.Color;
 import static jdk.nashorn.internal.objects.NativeMath.random;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.KeyEvent;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.AbstractAction;
+import javax.swing.JComponent;
 import javax.swing.JPanel;
+import javax.swing.KeyStroke;
 
 public class ColorTrap extends javax.swing.JFrame implements MouseListener {
     
@@ -53,6 +58,18 @@ public class ColorTrap extends javax.swing.JFrame implements MouseListener {
         addMouseLis();
         addActionLis();
         points = hgScore;
+        escapeKey();
+    }
+    
+    public final void escapeKey() {
+        getRootPane().getInputMap(JComponent.WHEN_IN_FOCUSED_WINDOW).put(
+                KeyStroke.getKeyStroke(KeyEvent.VK_ESCAPE, 0), "Cancel");
+        getRootPane().getActionMap().put("Cancel", new AbstractAction() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                System.exit(0);
+            }
+        });
     }
 
     public void addButtons() {

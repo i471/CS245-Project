@@ -5,6 +5,12 @@
  */
 package cs245.project;
 
+import java.awt.event.ActionEvent;
+import java.awt.event.KeyEvent;
+import javax.swing.AbstractAction;
+import javax.swing.JComponent;
+import javax.swing.KeyStroke;
+
 /**
  *
  * @author RobertDGil
@@ -16,6 +22,18 @@ public class StartupScreen extends javax.swing.JFrame {
      */
     public StartupScreen() {
         initComponents();
+        escapeKey();
+    }
+    
+    public final void escapeKey() {
+        getRootPane().getInputMap(JComponent.WHEN_IN_FOCUSED_WINDOW).put(
+                KeyStroke.getKeyStroke(KeyEvent.VK_ESCAPE, 0), "Cancel");
+        getRootPane().getActionMap().put("Cancel", new AbstractAction() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                System.exit(0);
+            }
+        });
     }
 
     /**

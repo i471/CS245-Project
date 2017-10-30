@@ -59,6 +59,7 @@ public class Sudoku extends javax.swing.JFrame
     */
    public Sudoku() 
    {
+       escapeKey();
        submit = new Button("submit");
        quit = new Button("quit");
        
@@ -198,5 +199,15 @@ public class Sudoku extends javax.swing.JFrame
        checkAnswer();
    }
  
+  public final void escapeKey() {
+        getRootPane().getInputMap(JComponent.WHEN_IN_FOCUSED_WINDOW).put(
+                KeyStroke.getKeyStroke(KeyEvent.VK_ESCAPE, 0), "Cancel");
+        getRootPane().getActionMap().put("Cancel", new AbstractAction() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                System.exit(0);
+            }
+        });
+    }
   
 }
