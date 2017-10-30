@@ -37,7 +37,7 @@ public RoundButton(String label) {
     Dimension size = getPreferredSize();
     size.width = size.height = Math.max(size.width,size.height);
     setPreferredSize(size);
-    escapeKey();
+    //escapeKey();
     setContentAreaFilled(false);
   }
 

@@ -22,22 +22,17 @@ import javax.swing.JLabel;
 public class CS245Project {
 
     public static void main(String[] args) throws InterruptedException, MalformedURLException, IOException {
-//       StartupScreen s = new StartupScreen();
-//       s.setLocationRelativeTo(null);
-//       s.setVisible(true);
-//       Thread.sleep(3000);
-//       s.setVisible(false); //Close startup screen
-//       
-//       JFrame obj = new JFrame();
-//       obj.add(new JLabel(new ImageIcon("background.jpeg")));
-//       obj.setMinimumSize(new Dimension(600, 400));
-//       obj.setLocationRelativeTo(null); //Centers frame on screen2
-//       obj.setVisible(true);
-         Sudoku s = new Sudoku();
-         s.setMinimumSize(new Dimension(600,400));
-         s.setLocationRelativeTo(null);
-         s.setVisible(true);
-        
-        //new ColorTrap().setVisible(true);
+       StartupScreen s = new StartupScreen();
+       s.setLocationRelativeTo(null);
+       s.setVisible(true);
+       Thread.sleep(3000);
+       s.setVisible(false); //Close startup screen
+       
+       JFrame obj = new JFrame();
+       obj.add(new JLabel(new ImageIcon("background.jpeg")));
+       obj.setMinimumSize(new Dimension(600, 400));
+       obj.setLocationRelativeTo(null); //Centers frame on screen2
+       obj.setVisible(true);
+
     }
 }

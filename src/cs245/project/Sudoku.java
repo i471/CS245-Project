@@ -11,6 +11,7 @@ public class Sudoku extends javax.swing.JFrame
     
     private Button submit;
     private Button quit;
+    private int totalScore;
    // Name-constants for the game properties
    public static final int GRID_SIZE = 9;    // Size of the board
    public static final int SUBGRID_SIZE = 3; // Size of the sub-grid
@@ -57,8 +58,9 @@ public class Sudoku extends javax.swing.JFrame
    /**
     * Constructor to setup the game and the UI Components
     */
-   public Sudoku() 
+   public Sudoku(int score) 
    {
+       totalScore = 540 + score;
        escapeKey();
        submit = new Button("submit");
        quit = new Button("quit");
@@ -69,6 +71,20 @@ public class Sudoku extends javax.swing.JFrame
            public void actionPerformed(ActionEvent e) 
            {
                checkAnswer();
+               dispose();
+               HighscoreFrame hsf = new HighscoreFrame(totalScore);
+               hsf.setLocationRelativeTo(null);
+               hsf.setVisible(true);
+           
+           }
+       });
+       
+       quit.addActionListener(new ActionListener() 
+       {
+           @Override
+           public void actionPerformed(ActionEvent e) 
+           {
+               totalScore -= 540;
                //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
            }
        });
@@ -180,18 +196,12 @@ public class Sudoku extends javax.swing.JFrame
                if(tempArray[row][col] != puzzle[row][col])
                {
                    same = false;
+                   totalScore -= 10;
                }
            }
        }
        
-       if(!same)
-       {
-           System.out.print("NO!");
-       }
-       else
-       {
-           System.out.print("YES!");
-       }
+       System.out.print(totalScore);
    }
    
    private void selectionButtonPressed()

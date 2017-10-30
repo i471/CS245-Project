@@ -156,9 +156,13 @@ public class ColorTrap extends javax.swing.JFrame implements MouseListener {
         if(numTries == 0)
         {
             this.dispose();
-            HighscoreFrame hsf = new HighscoreFrame(points);
-            hsf.setLocationRelativeTo(null);
-            hsf.setVisible(true);
+            Sudoku s = new Sudoku(points);
+            s.setLocationRelativeTo(null);
+            s.setMinimumSize(new Dimension(600, 400));
+            s.setVisible(true);
+//            HighscoreFrame hsf = new HighscoreFrame(points);
+//            hsf.setLocationRelativeTo(null);
+//            hsf.setVisible(true);
            
         }
         super.paint(g);
