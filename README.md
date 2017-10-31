@@ -50,3 +50,34 @@ similar fashion to the high scores screen including an “End” button (instead
 user back to the function buttons screen (If the user decided to skip the game, then their score
 should be 0). The game should allow for repeat play through with all elements reset as if playing
 for the first time.
+
+9) For this game the name of a color will randomly be given, for example Green, from the following
+list (Red, Yellow, Green, Blue, and Purple). The text will be randomly colored of the five colors
+from the list. Five buttons, one of each color, will be randomly placed in the window. When the
+user’s mouse moves over one of the button’s the button will become highlighted. The user is to
+click on the button which shares its color with the color of the text (Not the word given by the
+text). Give the user 100 pts for every correct button pressed, 0 for every incorrect button. After
+five rounds, the display will change to the following.
+
+10) For this game, the Sudoku board will be displayed for the user with the shown layout. The user
+will be able to click on the empty boxes and input a number from 1-9. (If the user inputs a
+number that is not 1-9, alert the user and have them correct it). The user will be able to
+change/edit any box that they were able to input a number for from the beginning. Once the
+user has a solution, they will click “submit” to check their solution or “quit” to end their game of
+Sudoku and move on. Scoring will be done in the following fashion: the user will begin with 540
+possible pts which will be given if the overall solution is correct. If the overall solution is
+incorrect, 10 pts will be taken for each box that is incorrect (only once per game). Points can
+only be taken from the total possible, never added, and points are only taken the first time a box
+is submitted with an incorrect answer. If their overall attempt is incorrect, alert the user upon
+submission and allow the user to try again.
+
+11) After the user either correctly solves the Sudoku puzzle or quits, display an end page where the
+user’s score is displayed in similar fashion to the high scores screen including an “End” button
+(instead of back) to take the user back to the function buttons screen. If the user’s score is
+higher than the lowest score saved in the high scores, give the user the option to save their
+score to the high score’s list. Provide a method for the user to input their initials. The game
+should allow for repeat play through with all elements reset as if playing for the first time.
+
+12) Implement the following: 1. tool tips for every component, 2. pressing F1 pops up display
+showing: your names, Bronco #s, project name, and term, 3. pressing the escape key exits
+the program.
