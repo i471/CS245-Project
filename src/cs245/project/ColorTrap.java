@@ -28,11 +28,11 @@ import javax.swing.KeyStroke;
 public class ColorTrap extends javax.swing.JFrame implements MouseListener {
     
     HiyaGUI HG = new HiyaGUI();
-    RoundButton b1 = new RoundButton("1");
-    RoundButton b2 = new RoundButton("2");
-    RoundButton b3 = new RoundButton("3");
-    RoundButton b4 = new RoundButton("4");
-    RoundButton b5 = new RoundButton("5");
+    RoundButton b1 = new RoundButton("");
+    RoundButton b2 = new RoundButton("");
+    RoundButton b3 = new RoundButton("");
+    RoundButton b4 = new RoundButton("");
+    RoundButton b5 = new RoundButton("");
 
     Random rand = new Random();
 
