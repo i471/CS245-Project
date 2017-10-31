@@ -46,12 +46,14 @@ public class JFrame extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel1 = new javax.swing.JPanel();
         jButtonPlay = new javax.swing.JButton();
         jButtonHighscores = new javax.swing.JButton();
         jButtonCredits = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setMinimumSize(new java.awt.Dimension(600, 400));
         getContentPane().setLayout(null);
 
         jButtonPlay.setText("PLAY");
@@ -62,7 +64,7 @@ public class JFrame extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButtonPlay);
-        jButtonPlay.setBounds(460, 260, 110, 23);
+        jButtonPlay.setBounds(480, 220, 110, 23);
 
         jButtonHighscores.setText("HIGHSCORES");
         jButtonHighscores.setToolTipText("View High Scores");
@@ -72,7 +74,7 @@ public class JFrame extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButtonHighscores);
-        jButtonHighscores.setBounds(460, 290, 110, 23);
+        jButtonHighscores.setBounds(480, 250, 110, 23);
 
         jButtonCredits.setText("CREDITS");
         jButtonCredits.setToolTipText("View Credits ");
@@ -82,12 +84,12 @@ public class JFrame extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButtonCredits);
-        jButtonCredits.setBounds(460, 320, 110, 23);
+        jButtonCredits.setBounds(480, 280, 110, 23);
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/cs245/project/BetterWolf.jpg"))); // NOI18N
         jLabel2.setToolTipText("");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(0, -20, 600, 400);
+        jLabel2.setBounds(0, 0, 610, 390);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -129,6 +131,20 @@ public class JFrame extends javax.swing.JFrame {
             }
         });
     }
+    public final void F1Key() {
+        getRootPane().getInputMap(JComponent.WHEN_IN_FOCUSED_WINDOW).put(
+                KeyStroke.getKeyStroke(KeyEvent.VK_F1, 0), "Cancel");
+        getRootPane().getActionMap().put("Cancel", new AbstractAction() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                F1Frame obj = new F1Frame();
+                //obj.add(new JLabel(new ImageIcon("background.jpeg")));
+                obj.setMinimumSize(new Dimension(600, 400));
+                obj.setLocationRelativeTo(null); //Centers frame on screen2
+                obj.setVisible(true);
+            }
+        });
+    }
     
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
@@ -161,25 +177,13 @@ public class JFrame extends javax.swing.JFrame {
             }
         });
     }
-    public final void F1Key() {
-        getRootPane().getInputMap(JComponent.WHEN_IN_FOCUSED_WINDOW).put(
-                KeyStroke.getKeyStroke(KeyEvent.VK_F1, 0), "Cancel");
-        getRootPane().getActionMap().put("Cancel", new AbstractAction() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                F1Frame obj = new F1Frame();
-                //obj.add(new JLabel(new ImageIcon("background.jpeg")));
-                obj.setMinimumSize(new Dimension(600, 400));
-                obj.setLocationRelativeTo(null); //Centers frame on screen2
-                obj.setVisible(true);
-            }
-        });
-    }
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButtonCredits;
     private javax.swing.JButton jButtonHighscores;
     private javax.swing.JButton jButtonPlay;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }
