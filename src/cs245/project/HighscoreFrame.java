@@ -39,7 +39,6 @@ public class HighscoreFrame extends javax.swing.JFrame {
         initComponents();
         escapeKey();
         highlightTextField();
-        F1Key();
         if(score != -1)
         {
             highScoreLabel1.setText(Integer.toString(score));
@@ -144,20 +143,6 @@ public class HighscoreFrame extends javax.swing.JFrame {
             }
         });
     }
-     public final void F1Key() {
-        getRootPane().getInputMap(JComponent.WHEN_IN_FOCUSED_WINDOW).put(
-                KeyStroke.getKeyStroke(KeyEvent.VK_F1, 0), "Cancel");
-        getRootPane().getActionMap().put("Cancel", new AbstractAction() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                F1Frame obj = new F1Frame();
-                //obj.add(new JLabel(new ImageIcon("background.jpeg")));
-                obj.setMinimumSize(new Dimension(600, 400));
-                obj.setLocationRelativeTo(null); //Centers frame on screen2
-                obj.setVisible(true);
-            }
-        });
-    }
     
     //
     /**
@@ -203,16 +188,11 @@ public class HighscoreFrame extends javax.swing.JFrame {
         init1TextField.getAccessibleContext().setAccessibleParent(init1TextField);
 
         jButton2.setText("Save Score");
-        jButton2.setToolTipText("This will save your score");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
             }
         });
-
-        previousScores.setText("Previous Scores");
-
-        initials.setText("Initials");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);

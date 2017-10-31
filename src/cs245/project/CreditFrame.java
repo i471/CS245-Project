@@ -26,7 +26,6 @@ public class CreditFrame extends javax.swing.JFrame {
     public CreditFrame() {
         initComponents();
         escapeKey();
-        F1Key();
     }
     
     public final void escapeKey() {
@@ -39,20 +38,7 @@ public class CreditFrame extends javax.swing.JFrame {
             }
         });
     }
-     public final void F1Key() {
-        getRootPane().getInputMap(JComponent.WHEN_IN_FOCUSED_WINDOW).put(
-                KeyStroke.getKeyStroke(KeyEvent.VK_F1, 0), "Cancel");
-        getRootPane().getActionMap().put("Cancel", new AbstractAction() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                F1Frame obj = new F1Frame();
-                //obj.add(new JLabel(new ImageIcon("background.jpeg")));
-                obj.setMinimumSize(new Dimension(600, 400));
-                obj.setLocationRelativeTo(null); //Centers frame on screen2
-                obj.setVisible(true);
-            }
-        });
-    }
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
