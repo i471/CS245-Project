@@ -97,6 +97,10 @@ public class Sudoku extends javax.swing.JFrame
            public void actionPerformed(ActionEvent e) 
            {
                totalScore -= 540;
+               dispose();
+               HighscoreFrame hsf = new HighscoreFrame(totalScore);
+               hsf.setLocationRelativeTo(null);
+               hsf.setVisible(true);
                //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
            }
        });
