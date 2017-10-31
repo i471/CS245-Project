@@ -6,6 +6,8 @@
 package cs245.project;
 
 import java.awt.Dimension;
+import java.awt.event.ActionEvent;
+import java.awt.event.KeyEvent;
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
@@ -16,8 +18,11 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.AbstractAction;
 import javax.swing.ImageIcon;
+import javax.swing.JComponent;
 import javax.swing.JLabel;
+import javax.swing.KeyStroke;
 
 /**
  *
@@ -32,6 +37,7 @@ public class HighscoreFrame extends javax.swing.JFrame {
    public HighscoreFrame(int score) 
    {
         initComponents();
+        escapeKey();
         highlightTextField();
         if(score != -1)
         {
@@ -126,6 +132,16 @@ public class HighscoreFrame extends javax.swing.JFrame {
         printWriter.println(init1TextField.getText());
         printWriter.println(highScoreLabel1.getText());
         printWriter.close();
+    }
+    public final void escapeKey() {
+        getRootPane().getInputMap(JComponent.WHEN_IN_FOCUSED_WINDOW).put(
+                KeyStroke.getKeyStroke(KeyEvent.VK_ESCAPE, 0), "Cancel");
+        getRootPane().getActionMap().put("Cancel", new AbstractAction() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                System.exit(0);
+            }
+        });
     }
     
     //

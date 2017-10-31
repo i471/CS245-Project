@@ -14,6 +14,8 @@ public class Sudoku extends javax.swing.JFrame
     private Button submit;
     private Button quit;
     private int totalScore;
+    private int showBox =1;
+    private int arrayScore[];
    // Name-constants for the game properties
    public static final int BOARD_SIZE = 9;    // Size of the board
    public static final int SUB_BOARD_SIZE = 3; // Size of the sub-grid
@@ -83,11 +85,7 @@ public class Sudoku extends javax.swing.JFrame
            public void actionPerformed(ActionEvent e) 
            {
                checkAnswer();
-               dispose();
-               HighscoreFrame hsf = new HighscoreFrame(totalScore);
-               hsf.setLocationRelativeTo(null);
-               hsf.setVisible(true);
-           
+              
            }
        });
        
@@ -96,7 +94,6 @@ public class Sudoku extends javax.swing.JFrame
            @Override
            public void actionPerformed(ActionEvent e) 
            {
-               totalScore -= 540;
                dispose();
                HighscoreFrame hsf = new HighscoreFrame(totalScore);
                hsf.setLocationRelativeTo(null);
@@ -213,11 +210,22 @@ public class Sudoku extends javax.swing.JFrame
                {
                    same = false;
                    totalScore -= 10;
+                   showBox =0;
                }
            }
        }
-       
-       System.out.print(totalScore);
+             
+       if(showBox == 0){
+           JOptionPane.showMessageDialog(this,"Missed a few, Try again!");
+           dispose();
+           this.setVisible(true);
+       } else if(showBox == 1){
+               dispose();
+               HighscoreFrame hsf = new HighscoreFrame(totalScore);
+               hsf.setLocationRelativeTo(null);
+               hsf.setVisible(true);
+       }
+       System.out.println(totalScore);
    }
    
    private void selectionButtonPressed()
