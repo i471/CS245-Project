@@ -28,6 +28,7 @@ public class JFrame extends javax.swing.JFrame {
     public JFrame() {
         initComponents();
         escapeKey();
+        F1Key();
     }
 
     JFrame(String test) {
@@ -125,6 +126,20 @@ public class JFrame extends javax.swing.JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 System.exit(0);
+            }
+        });
+    }
+     public final void F1Key() {
+        getRootPane().getInputMap(JComponent.WHEN_IN_FOCUSED_WINDOW).put(
+                KeyStroke.getKeyStroke(KeyEvent.VK_F1, 0), "Cancel");
+        getRootPane().getActionMap().put("Cancel", new AbstractAction() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                F1Frame obj = new F1Frame();
+                //obj.add(new JLabel(new ImageIcon("background.jpeg")));
+                obj.setMinimumSize(new Dimension(600, 400));
+                obj.setLocationRelativeTo(null); //Centers frame on screen2
+                obj.setVisible(true);
             }
         });
     }
