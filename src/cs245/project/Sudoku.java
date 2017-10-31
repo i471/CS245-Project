@@ -10,12 +10,12 @@ import javax.swing.text.*;
 
 public class Sudoku extends javax.swing.JFrame 
 {
-    
+           boolean firstTime;
     private Button submit;
     private Button quit;
     private int totalScore;
     private int showBox =1;
-    private int arrayScore[];
+    private int arrayScore[] ;
    // Name-constants for the game properties
    public static final int BOARD_SIZE = 9;    // Size of the board
    public static final int SUB_BOARD_SIZE = 3; // Size of the sub-grid
