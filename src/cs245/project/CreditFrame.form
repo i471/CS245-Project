@@ -71,6 +71,7 @@
           <Font name="Adobe Hebrew" size="48" style="1"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Credits"/>
+        <Property name="toolTipText" type="java.lang.String" value="CREDIT COMPONENT"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel2">
@@ -79,6 +80,7 @@
           <Font name="Adobe Hebrew" size="18" style="1"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Edgar Pineda              010397504"/>
+        <Property name="toolTipText" type="java.lang.String" value="Student Credit for Project"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel3">
@@ -87,6 +89,7 @@
           <Font name="Adobe Hebrew" size="18" style="1"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Josh Montgomery      011750412"/>
+        <Property name="toolTipText" type="java.lang.String" value="Student Credit for Project"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel4">
@@ -95,11 +98,13 @@
           <Font name="Adobe Hebrew" size="18" style="1"/>
         </Property>
         <Property name="text" type="java.lang.String" value=" Robert Gil                    013502216"/>
+        <Property name="toolTipText" type="java.lang.String" value="Student Credit for Project"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JButton" name="jButton1">
       <Properties>
         <Property name="text" type="java.lang.String" value="Back"/>
+        <Property name="toolTipText" type="java.lang.String" value="Go to previous menu"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>

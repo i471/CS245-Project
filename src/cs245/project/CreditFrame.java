@@ -58,17 +58,22 @@ public class CreditFrame extends javax.swing.JFrame {
 
         jLabel1.setFont(new java.awt.Font("Adobe Hebrew", 1, 48)); // NOI18N
         jLabel1.setText("Credits");
+        jLabel1.setToolTipText("CREDIT COMPONENT");
 
         jLabel2.setFont(new java.awt.Font("Adobe Hebrew", 1, 18)); // NOI18N
         jLabel2.setText("Edgar Pineda              010397504");
+        jLabel2.setToolTipText("Student Credit for Project");
 
         jLabel3.setFont(new java.awt.Font("Adobe Hebrew", 1, 18)); // NOI18N
         jLabel3.setText("Josh Montgomery      011750412");
+        jLabel3.setToolTipText("Student Credit for Project");
 
         jLabel4.setFont(new java.awt.Font("Adobe Hebrew", 1, 18)); // NOI18N
         jLabel4.setText(" Robert Gil                    013502216");
+        jLabel4.setToolTipText("Student Credit for Project");
 
         jButton1.setText("Back");
+        jButton1.setToolTipText("Go to previous menu");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);

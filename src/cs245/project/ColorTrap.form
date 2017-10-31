@@ -51,6 +51,7 @@
     <Component class="javax.swing.JLabel" name="colorLabel">
       <Properties>
         <Property name="text" type="java.lang.String" value="colorLabel"/>
+        <Property name="toolTipText" type="java.lang.String" value="PICK THE COLOR OF THE TEXT!"/>
       </Properties>
     </Component>
   </SubComponents>

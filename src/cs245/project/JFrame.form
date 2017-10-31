@@ -28,39 +28,42 @@
     <Component class="javax.swing.JButton" name="jButtonPlay">
       <Properties>
         <Property name="text" type="java.lang.String" value="PLAY"/>
+        <Property name="toolTipText" type="java.lang.String" value="initiate Game Series"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonPlayActionPerformed"/>
       </Events>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="460" y="280" width="110" height="-1"/>
+          <AbsoluteConstraints x="460" y="260" width="110" height="-1"/>
         </Constraint>
       </Constraints>
     </Component>
     <Component class="javax.swing.JButton" name="jButtonHighscores">
       <Properties>
         <Property name="text" type="java.lang.String" value="HIGHSCORES"/>
+        <Property name="toolTipText" type="java.lang.String" value="View High Scores"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonHighscoresActionPerformed"/>
       </Events>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="460" y="310" width="110" height="-1"/>
+          <AbsoluteConstraints x="460" y="290" width="110" height="-1"/>
         </Constraint>
       </Constraints>
     </Component>
     <Component class="javax.swing.JButton" name="jButtonCredits">
       <Properties>
         <Property name="text" type="java.lang.String" value="CREDITS"/>
+        <Property name="toolTipText" type="java.lang.String" value="View Credits "/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonCreditsActionPerformed"/>
       </Events>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="460" y="340" width="110" height="-1"/>
+          <AbsoluteConstraints x="460" y="320" width="110" height="-1"/>
         </Constraint>
       </Constraints>
     </Component>

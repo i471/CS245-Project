@@ -219,6 +219,7 @@
     <Component class="javax.swing.JButton" name="jButtonA">
       <Properties>
         <Property name="text" type="java.lang.String" value="A"/>
+        <Property name="toolTipText" type="java.lang.String" value="Guess this letter!"/>
       </Properties>
       <Events>
         <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jButtonAMouseClicked"/>
@@ -227,6 +228,7 @@
     <Component class="javax.swing.JButton" name="jButtonB">
       <Properties>
         <Property name="text" type="java.lang.String" value="B"/>
+        <Property name="toolTipText" type="java.lang.String" value="Guess this letter!"/>
       </Properties>
       <Events>
         <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jButtonBMouseClicked"/>
@@ -235,6 +237,7 @@
     <Component class="javax.swing.JButton" name="jButtonC">
       <Properties>
         <Property name="text" type="java.lang.String" value="C"/>
+        <Property name="toolTipText" type="java.lang.String" value="Guess this letter!"/>
       </Properties>
       <Events>
         <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jButtonCMouseClicked"/>
@@ -243,6 +246,7 @@
     <Component class="javax.swing.JButton" name="jButtonD">
       <Properties>
         <Property name="text" type="java.lang.String" value="D"/>
+        <Property name="toolTipText" type="java.lang.String" value="Guess this letter!"/>
       </Properties>
       <Events>
         <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jButtonDMouseClicked"/>
@@ -251,6 +255,7 @@
     <Component class="javax.swing.JButton" name="jButtonE">
       <Properties>
         <Property name="text" type="java.lang.String" value="E"/>
+        <Property name="toolTipText" type="java.lang.String" value="Guess this letter!"/>
       </Properties>
       <Events>
         <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jButtonEMouseClicked"/>
@@ -259,6 +264,7 @@
     <Component class="javax.swing.JButton" name="jButtonF">
       <Properties>
         <Property name="text" type="java.lang.String" value="F"/>
+        <Property name="toolTipText" type="java.lang.String" value="Guess this letter!"/>
       </Properties>
       <Events>
         <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jButtonFMouseClicked"/>
@@ -267,6 +273,7 @@
     <Component class="javax.swing.JButton" name="jButtonG">
       <Properties>
         <Property name="text" type="java.lang.String" value="G"/>
+        <Property name="toolTipText" type="java.lang.String" value="Guess this letter!"/>
       </Properties>
       <Events>
         <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jButtonGMouseClicked"/>
@@ -275,6 +282,7 @@
     <Component class="javax.swing.JButton" name="jButtonH">
       <Properties>
         <Property name="text" type="java.lang.String" value="H"/>
+        <Property name="toolTipText" type="java.lang.String" value="Guess this letter!"/>
       </Properties>
       <Events>
         <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jButtonHMouseClicked"/>
@@ -283,6 +291,7 @@
     <Component class="javax.swing.JButton" name="jButtonI">
       <Properties>
         <Property name="text" type="java.lang.String" value="I"/>
+        <Property name="toolTipText" type="java.lang.String" value="Guess this letter!"/>
       </Properties>
       <Events>
         <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jButtonIMouseClicked"/>
@@ -291,6 +300,7 @@
     <Component class="javax.swing.JButton" name="jButtonJ">
       <Properties>
         <Property name="text" type="java.lang.String" value="J"/>
+        <Property name="toolTipText" type="java.lang.String" value="Guess this letter!"/>
       </Properties>
       <Events>
         <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jButtonJMouseClicked"/>
@@ -299,6 +309,7 @@
     <Component class="javax.swing.JButton" name="jButtonK">
       <Properties>
         <Property name="text" type="java.lang.String" value="K"/>
+        <Property name="toolTipText" type="java.lang.String" value="Guess this letter!"/>
       </Properties>
       <Events>
         <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jButtonKMouseClicked"/>
@@ -307,6 +318,7 @@
     <Component class="javax.swing.JButton" name="jButtonL">
       <Properties>
         <Property name="text" type="java.lang.String" value="L"/>
+        <Property name="toolTipText" type="java.lang.String" value="Guess this letter!"/>
       </Properties>
       <Events>
         <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jButtonLMouseClicked"/>
@@ -315,6 +327,7 @@
     <Component class="javax.swing.JButton" name="jButtonM">
       <Properties>
         <Property name="text" type="java.lang.String" value="M"/>
+        <Property name="toolTipText" type="java.lang.String" value="Guess this letter!"/>
       </Properties>
       <Events>
         <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jButtonMMouseClicked"/>
@@ -323,6 +336,7 @@
     <Component class="javax.swing.JButton" name="jButtonN">
       <Properties>
         <Property name="text" type="java.lang.String" value="N"/>
+        <Property name="toolTipText" type="java.lang.String" value="Guess this letter!"/>
       </Properties>
       <Events>
         <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jButtonNMouseClicked"/>
@@ -331,6 +345,7 @@
     <Component class="javax.swing.JButton" name="jButtonO">
       <Properties>
         <Property name="text" type="java.lang.String" value="O"/>
+        <Property name="toolTipText" type="java.lang.String" value="Guess this letter!"/>
       </Properties>
       <Events>
         <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jButtonOMouseClicked"/>
@@ -339,6 +354,7 @@
     <Component class="javax.swing.JButton" name="jButtonP">
       <Properties>
         <Property name="text" type="java.lang.String" value="P"/>
+        <Property name="toolTipText" type="java.lang.String" value="Guess this letter!"/>
       </Properties>
       <Events>
         <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jButtonPMouseClicked"/>
@@ -347,6 +363,7 @@
     <Component class="javax.swing.JButton" name="jButtonQ">
       <Properties>
         <Property name="text" type="java.lang.String" value="Q"/>
+        <Property name="toolTipText" type="java.lang.String" value="Guess this letter!"/>
       </Properties>
       <Events>
         <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jButtonQMouseClicked"/>
@@ -355,6 +372,7 @@
     <Component class="javax.swing.JButton" name="jButtonR">
       <Properties>
         <Property name="text" type="java.lang.String" value="R"/>
+        <Property name="toolTipText" type="java.lang.String" value="Guess this letter!"/>
       </Properties>
       <Events>
         <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jButtonRMouseClicked"/>
@@ -363,6 +381,7 @@
     <Component class="javax.swing.JButton" name="jButtonS">
       <Properties>
         <Property name="text" type="java.lang.String" value="S"/>
+        <Property name="toolTipText" type="java.lang.String" value="Guess this letter!"/>
       </Properties>
       <Events>
         <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jButtonSMouseClicked"/>
@@ -371,6 +390,7 @@
     <Component class="javax.swing.JButton" name="jButtonT">
       <Properties>
         <Property name="text" type="java.lang.String" value="T"/>
+        <Property name="toolTipText" type="java.lang.String" value="Guess this letter!"/>
       </Properties>
       <Events>
         <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jButtonTMouseClicked"/>
@@ -379,6 +399,7 @@
     <Component class="javax.swing.JButton" name="jButtonU">
       <Properties>
         <Property name="text" type="java.lang.String" value="U"/>
+        <Property name="toolTipText" type="java.lang.String" value="Guess this letter!"/>
       </Properties>
       <Events>
         <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jButtonUMouseClicked"/>
@@ -387,6 +408,7 @@
     <Component class="javax.swing.JButton" name="jButtonV">
       <Properties>
         <Property name="text" type="java.lang.String" value="V"/>
+        <Property name="toolTipText" type="java.lang.String" value="Guess this letter!"/>
       </Properties>
       <Events>
         <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jButtonVMouseClicked"/>
@@ -395,6 +417,7 @@
     <Component class="javax.swing.JButton" name="jButtonW">
       <Properties>
         <Property name="text" type="java.lang.String" value="W"/>
+        <Property name="toolTipText" type="java.lang.String" value="Guess this letter!"/>
       </Properties>
       <Events>
         <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jButtonWMouseClicked"/>
@@ -403,6 +426,7 @@
     <Component class="javax.swing.JButton" name="jButtonX">
       <Properties>
         <Property name="text" type="java.lang.String" value="X"/>
+        <Property name="toolTipText" type="java.lang.String" value="Guess this letter!"/>
       </Properties>
       <Events>
         <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jButtonXMouseClicked"/>
@@ -411,6 +435,7 @@
     <Component class="javax.swing.JButton" name="jButtonY">
       <Properties>
         <Property name="text" type="java.lang.String" value="Y"/>
+        <Property name="toolTipText" type="java.lang.String" value="Guess this letter!"/>
       </Properties>
       <Events>
         <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jButtonYMouseClicked"/>
@@ -419,6 +444,7 @@
     <Component class="javax.swing.JButton" name="jButtonZ">
       <Properties>
         <Property name="text" type="java.lang.String" value="Z"/>
+        <Property name="toolTipText" type="java.lang.String" value="Guess this letter!"/>
       </Properties>
       <Events>
         <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jButtonZMouseClicked"/>
@@ -427,11 +453,13 @@
     <Component class="javax.swing.JLabel" name="date">
       <Properties>
         <Property name="text" type="java.lang.String" value="date"/>
+        <Property name="toolTipText" type="java.lang.String" value="Date and Time"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="time">
       <Properties>
         <Property name="text" type="java.lang.String" value="time"/>
+        <Property name="toolTipText" type="java.lang.String" value="Date and Time"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="answerHidden">
@@ -490,6 +518,7 @@
     <Component class="javax.swing.JButton" name="jButtonSkip">
       <Properties>
         <Property name="text" type="java.lang.String" value="Skip"/>
+        <Property name="toolTipText" type="java.lang.String" value="Press to skip this game"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonSkipActionPerformed"/>
@@ -501,6 +530,7 @@
           <Font name="sansserif" size="18" style="1"/>
         </Property>
         <Property name="text" type="java.lang.String" value="jLabel1"/>
+        <Property name="toolTipText" type="java.lang.String" value="Name of the Game!"/>
       </Properties>
     </Component>
   </SubComponents>

@@ -54,31 +54,34 @@ public class JFrame extends javax.swing.JFrame {
         getContentPane().setLayout(null);
 
         jButtonPlay.setText("PLAY");
+        jButtonPlay.setToolTipText("initiate Game Series");
         jButtonPlay.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonPlayActionPerformed(evt);
             }
         });
         getContentPane().add(jButtonPlay);
-        jButtonPlay.setBounds(460, 280, 110, 23);
+        jButtonPlay.setBounds(460, 260, 110, 23);
 
         jButtonHighscores.setText("HIGHSCORES");
+        jButtonHighscores.setToolTipText("View High Scores");
         jButtonHighscores.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonHighscoresActionPerformed(evt);
             }
         });
         getContentPane().add(jButtonHighscores);
-        jButtonHighscores.setBounds(460, 310, 110, 23);
+        jButtonHighscores.setBounds(460, 290, 110, 23);
 
         jButtonCredits.setText("CREDITS");
+        jButtonCredits.setToolTipText("View Credits ");
         jButtonCredits.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonCreditsActionPerformed(evt);
             }
         });
         getContentPane().add(jButtonCredits);
-        jButtonCredits.setBounds(460, 340, 110, 23);
+        jButtonCredits.setBounds(460, 320, 110, 23);
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/cs245/project/BetterWolf.jpg"))); // NOI18N
         jLabel2.setToolTipText("");

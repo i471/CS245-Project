@@ -129,6 +129,7 @@ public class ColorTrap extends javax.swing.JFrame implements MouseListener {
         setResizable(false);
 
         colorLabel.setText("colorLabel");
+        colorLabel.setToolTipText("PICK THE COLOR OF THE TEXT!");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);

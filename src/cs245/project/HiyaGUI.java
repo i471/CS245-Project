@@ -269,7 +269,6 @@ public class HiyaGUI extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         nameSize = new javax.swing.JLabel();
         name = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
         jButtonSkip = new javax.swing.JButton();
         hangmanLabel = new javax.swing.JLabel();
 
@@ -283,6 +282,7 @@ public class HiyaGUI extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jButtonA.setText("A");
+        jButtonA.setToolTipText("Guess this letter!");
         jButtonA.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jButtonAMouseClicked(evt);
@@ -290,6 +290,7 @@ public class HiyaGUI extends javax.swing.JFrame {
         });
 
         jButtonB.setText("B");
+        jButtonB.setToolTipText("Guess this letter!");
         jButtonB.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jButtonBMouseClicked(evt);
@@ -297,6 +298,7 @@ public class HiyaGUI extends javax.swing.JFrame {
         });
 
         jButtonC.setText("C");
+        jButtonC.setToolTipText("Guess this letter!");
         jButtonC.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jButtonCMouseClicked(evt);
@@ -304,6 +306,7 @@ public class HiyaGUI extends javax.swing.JFrame {
         });
 
         jButtonD.setText("D");
+        jButtonD.setToolTipText("Guess this letter!");
         jButtonD.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jButtonDMouseClicked(evt);
@@ -311,6 +314,7 @@ public class HiyaGUI extends javax.swing.JFrame {
         });
 
         jButtonE.setText("E");
+        jButtonE.setToolTipText("Guess this letter!");
         jButtonE.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jButtonEMouseClicked(evt);
@@ -318,6 +322,7 @@ public class HiyaGUI extends javax.swing.JFrame {
         });
 
         jButtonF.setText("F");
+        jButtonF.setToolTipText("Guess this letter!");
         jButtonF.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jButtonFMouseClicked(evt);
@@ -325,6 +330,7 @@ public class HiyaGUI extends javax.swing.JFrame {
         });
 
         jButtonG.setText("G");
+        jButtonG.setToolTipText("Guess this letter!");
         jButtonG.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jButtonGMouseClicked(evt);
@@ -332,6 +338,7 @@ public class HiyaGUI extends javax.swing.JFrame {
         });
 
         jButtonH.setText("H");
+        jButtonH.setToolTipText("Guess this letter!");
         jButtonH.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jButtonHMouseClicked(evt);
@@ -339,6 +346,7 @@ public class HiyaGUI extends javax.swing.JFrame {
         });
 
         jButtonI.setText("I");
+        jButtonI.setToolTipText("Guess this letter!");
         jButtonI.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jButtonIMouseClicked(evt);
@@ -346,6 +354,7 @@ public class HiyaGUI extends javax.swing.JFrame {
         });
 
         jButtonJ.setText("J");
+        jButtonJ.setToolTipText("Guess this letter!");
         jButtonJ.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jButtonJMouseClicked(evt);
@@ -353,6 +362,7 @@ public class HiyaGUI extends javax.swing.JFrame {
         });
 
         jButtonK.setText("K");
+        jButtonK.setToolTipText("Guess this letter!");
         jButtonK.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jButtonKMouseClicked(evt);
@@ -360,6 +370,7 @@ public class HiyaGUI extends javax.swing.JFrame {
         });
 
         jButtonL.setText("L");
+        jButtonL.setToolTipText("Guess this letter!");
         jButtonL.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jButtonLMouseClicked(evt);
@@ -367,6 +378,7 @@ public class HiyaGUI extends javax.swing.JFrame {
         });
 
         jButtonM.setText("M");
+        jButtonM.setToolTipText("Guess this letter!");
         jButtonM.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jButtonMMouseClicked(evt);
@@ -374,6 +386,7 @@ public class HiyaGUI extends javax.swing.JFrame {
         });
 
         jButtonN.setText("N");
+        jButtonN.setToolTipText("Guess this letter!");
         jButtonN.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jButtonNMouseClicked(evt);
@@ -381,6 +394,7 @@ public class HiyaGUI extends javax.swing.JFrame {
         });
 
         jButtonO.setText("O");
+        jButtonO.setToolTipText("Guess this letter!");
         jButtonO.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jButtonOMouseClicked(evt);
@@ -388,6 +402,7 @@ public class HiyaGUI extends javax.swing.JFrame {
         });
 
         jButtonP.setText("P");
+        jButtonP.setToolTipText("Guess this letter!");
         jButtonP.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jButtonPMouseClicked(evt);
@@ -395,6 +410,7 @@ public class HiyaGUI extends javax.swing.JFrame {
         });
 
         jButtonQ.setText("Q");
+        jButtonQ.setToolTipText("Guess this letter!");
         jButtonQ.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jButtonQMouseClicked(evt);
@@ -402,6 +418,7 @@ public class HiyaGUI extends javax.swing.JFrame {
         });
 
         jButtonR.setText("R");
+        jButtonR.setToolTipText("Guess this letter!");
         jButtonR.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jButtonRMouseClicked(evt);
@@ -409,6 +426,7 @@ public class HiyaGUI extends javax.swing.JFrame {
         });
 
         jButtonS.setText("S");
+        jButtonS.setToolTipText("Guess this letter!");
         jButtonS.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jButtonSMouseClicked(evt);
@@ -416,6 +434,7 @@ public class HiyaGUI extends javax.swing.JFrame {
         });
 
         jButtonT.setText("T");
+        jButtonT.setToolTipText("Guess this letter!");
         jButtonT.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jButtonTMouseClicked(evt);
@@ -423,6 +442,7 @@ public class HiyaGUI extends javax.swing.JFrame {
         });
 
         jButtonU.setText("U");
+        jButtonU.setToolTipText("Guess this letter!");
         jButtonU.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jButtonUMouseClicked(evt);
@@ -430,6 +450,7 @@ public class HiyaGUI extends javax.swing.JFrame {
         });
 
         jButtonV.setText("V");
+        jButtonV.setToolTipText("Guess this letter!");
         jButtonV.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jButtonVMouseClicked(evt);
@@ -437,6 +458,7 @@ public class HiyaGUI extends javax.swing.JFrame {
         });
 
         jButtonW.setText("W");
+        jButtonW.setToolTipText("Guess this letter!");
         jButtonW.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jButtonWMouseClicked(evt);
@@ -444,6 +466,7 @@ public class HiyaGUI extends javax.swing.JFrame {
         });
 
         jButtonX.setText("X");
+        jButtonX.setToolTipText("Guess this letter!");
         jButtonX.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jButtonXMouseClicked(evt);
@@ -451,6 +474,7 @@ public class HiyaGUI extends javax.swing.JFrame {
         });
 
         jButtonY.setText("Y");
+        jButtonY.setToolTipText("Guess this letter!");
         jButtonY.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jButtonYMouseClicked(evt);
@@ -458,6 +482,7 @@ public class HiyaGUI extends javax.swing.JFrame {
         });
 
         jButtonZ.setText("Z");
+        jButtonZ.setToolTipText("Guess this letter!");
         jButtonZ.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jButtonZMouseClicked(evt);
@@ -465,17 +490,16 @@ public class HiyaGUI extends javax.swing.JFrame {
         });
 
         date.setText("date");
+        date.setToolTipText("Date and Time");
 
         time.setText("time");
+        time.setToolTipText("Date and Time");
 
         answerHidden.setFont(new java.awt.Font("sansserif", 0, 24)); // NOI18N
 
         nameSize.setText("nameSize");
 
         name.setText("name");
-
-        jLabel1.setText("Answer");
-        jLabel1.setName("answerString"); // NOI18N
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -485,13 +509,9 @@ public class HiyaGUI extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(name, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
-                        .addContainerGap(423, Short.MAX_VALUE)
+                        .addContainerGap(72, Short.MAX_VALUE)
                         .addComponent(nameSize, javax.swing.GroupLayout.PREFERRED_SIZE, 0, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(198, 198, 198))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 541, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -500,11 +520,11 @@ public class HiyaGUI extends javax.swing.JFrame {
                 .addComponent(nameSize)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(name)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 37, Short.MAX_VALUE))
+                .addContainerGap(43, Short.MAX_VALUE))
         );
 
         jButtonSkip.setText("Skip");
+        jButtonSkip.setToolTipText("Press to skip this game");
         jButtonSkip.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonSkipActionPerformed(evt);
@@ -513,6 +533,7 @@ public class HiyaGUI extends javax.swing.JFrame {
 
         hangmanLabel.setFont(new java.awt.Font("sansserif", 1, 18)); // NOI18N
         hangmanLabel.setText("jLabel1");
+        hangmanLabel.setToolTipText("Name of the Game!");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -557,7 +578,7 @@ public class HiyaGUI extends javax.swing.JFrame {
                         .addComponent(hangmanLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(jPanelHang, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 112, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                         .addGroup(layout.createSequentialGroup()
@@ -1063,7 +1084,6 @@ public class HiyaGUI extends javax.swing.JFrame {
     private javax.swing.JButton jButtonX;
     private javax.swing.JButton jButtonY;
     private javax.swing.JButton jButtonZ;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JList<String> jList1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanelHang;
